@@ -1,4 +1,6 @@
-# GKD 综合订阅（AIsouler + Adpro + id667）
+# Well 的 GKD 订阅（AIsouler + Adpro + id667）
+
+仓库地址：<https://github.com/Welling-07/Well_gkd_link>　订阅在 GKD 中显示为 **Well的GKD订阅**。
 
 本仓库基于 [gkd-kit/subscription-template](https://github.com/gkd-kit/subscription-template) 构建，用于发布一个由三个公开 GKD 订阅合并而成的个人订阅：
 
@@ -14,16 +16,14 @@
 
 ## 订阅地址
 
-推送并运行一次 Actions 后即可使用（把 `<user>/<repo>` 换成你自己的仓库）：
-
 ```text
-https://raw.githubusercontent.com/<user>/<repo>/main/dist/gkd.json5
+https://raw.githubusercontent.com/Welling-07/Well_gkd_link/main/dist/gkd.json5
 ```
 
 jsDelivr 镜像（国内更快，GitHub 更新后可能有几分钟缓存）：
 
 ```text
-https://fastly.jsdelivr.net/gh/<user>/<repo>@main/dist/gkd.json5
+https://fastly.jsdelivr.net/gh/Welling-07/Well_gkd_link@main/dist/gkd.json5
 ```
 
 在 GKD 里添加订阅时请使用上面的**直链**，不要用 `github.com/.../blob/...` 页面地址。
@@ -38,7 +38,7 @@ scripts/generate.ts      由 data/merged.json5 生成 src/apps/*.ts、categories
 scripts/check.ts         模板自带：tsc 后调用 checkSubscription 校验
 scripts/build.ts         模板自带：调用 updateDist 生成 dist
 scripts/local_build.mjs  无 pnpm / tsx 环境时的等价校验与构建脚本
-src/subscription.ts      订阅元信息（id、名称、作者、checkUpdateUrl）
+src/subscription.ts      订阅元信息（id、名称、作者、supportUri、checkUpdateUrl）
 src/apps/<packageId>.ts  每个应用一个文件，由 scripts/generate.ts 生成
 src/categories.ts        13 个分类，自动生成
 src/globalGroups.ts      6 个全局组，自动生成
@@ -70,7 +70,7 @@ node scripts/local_build.mjs
 
 ## 变更订阅信息
 
-编辑 `src/subscription.ts` 里的 `id`、`name`、`author`，建议同时补上 `supportUri`（反馈地址，通常是本仓库地址）。
+订阅名称、作者、反馈地址写在 `src/subscription.ts`，同时 `data/merged.json5` 顶部的 `name` / `author` 也建议改成一样，避免下次 `pnpm run generate` 之后两边不一致。改完重新构建即可。
 
 ## 致谢与声明
 

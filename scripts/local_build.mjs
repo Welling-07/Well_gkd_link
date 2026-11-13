@@ -31,6 +31,10 @@ const pickString = (name) => {
   const raw = pick(name);
   return raw.replace(/^['"`]/, '').replace(/['"`]$/, '');
 };
+const pickOptionalString = (name) => {
+  const present = new RegExp(`^ {2}${name}:`, 'm').test(subscriptionSrc);
+  return present ? pickString(name) : undefined;
+};
 
 const appsDir = path.join(root, 'src', 'apps');
 const apps = fs
@@ -45,6 +49,7 @@ const subscription = {
   version: Number(pick('version')),
   author: pickString('author'),
   checkUpdateUrl: pickString('checkUpdateUrl'),
+  supportUri: pickOptionalString('supportUri'),
   categories: extractJson('src/categories.ts', 'defineGkdCategories('),
   globalGroups: extractJson('src/globalGroups.ts', 'defineGkdGlobalGroups('),
   apps,

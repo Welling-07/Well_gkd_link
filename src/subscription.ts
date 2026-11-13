@@ -14,10 +14,11 @@ import globalGroups from './globalGroups';
  */
 export default defineGkdSubscription({
   id: 1234567,
-  name: 'AIsouler + Adpro + id667 综合订阅',
+  name: 'Well的GKD订阅',
   version: 1,
-  author: '合并自 AIsouler / Adpro / id667',
+  author: 'Well（合并自 AIsouler / Adpro / id667）',
   checkUpdateUrl: './gkd.version.json5',
+  supportUri: 'https://github.com/Welling-07/Well_gkd_link',
   categories,
   globalGroups,
   apps: await batchImportApps(`${import.meta.dirname}/apps`),
