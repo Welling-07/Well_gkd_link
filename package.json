@@ -5,6 +5,7 @@
   "engines": {
     "node": ">=22"
   },
+  "packageManager": "pnpm@11.20.0",
   "scripts": {
     "postinstall": "simple-git-hooks",
     "format": "prettier --cache --write --ignore-unknown .",
