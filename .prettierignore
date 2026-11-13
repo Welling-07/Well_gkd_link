@@ -1,0 +1,11 @@
+pnpm-lock.yaml
+pnpm-workspace.yaml
+LICENCE
+
+dist
+
+src/apps
+src/categories.ts
+src/globalGroups.ts
+
+CHANGELOG.md

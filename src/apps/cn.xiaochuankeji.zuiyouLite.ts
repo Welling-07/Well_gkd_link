@@ -1,0 +1,143 @@
+// 此文件由 scripts/generate.ts 从 data/merged.json5 自动生成，请勿手工修改。
+import { defineGkdApp } from '@gkd-kit/define';
+
+export default defineGkdApp({
+  "id": "cn.xiaochuankeji.zuiyouLite",
+  "name": "皮皮搞笑",
+  "groups": [
+    {
+      "key": 0,
+      "name": "开屏广告",
+      "order": -10,
+      "matchTime": 10000,
+      "actionMaximum": 1,
+      "resetMatch": "app",
+      "actionMaximumKey": 0,
+      "priorityTime": 10000,
+      "rules": [
+        {
+          "fastQuery": true,
+          "anyMatches": [
+            "@View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0] <n FrameLayout[childCount>2][text=null][desc=null] >(n+6) [text*=\"第三方应用\" || text*=\"扭动手机\" || text*=\"点击或上滑\" || text*=\"省钱好物\" || text*=\"扭一扭\"][visibleToUser=true]",
+            "FrameLayout > FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]"
+          ],
+          "snapshotUrls": "https://i.gkd.li/i/14546304",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000
+        },
+        {
+          "fastQuery": true,
+          "matches": "[text*=\"跳过\"][text.length<=10]",
+          "snapshotUrls": [
+            "https://i.gkd.li/i/12745095",
+            "https://i.gkd.li/i/13387320"
+          ],
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "actionMaximumKey": 0,
+          "priorityTime": 10000
+        },
+        {
+          "fastQuery": true,
+          "position": {
+            "left": "width * 0.8778",
+            "top": "width * 0.1667"
+          },
+          "matches": "[id$=\"spalsh_ad_view\"] >4 [id$=\"native_container\"] >2 [vid=\"contentView\"]",
+          "exampleUrls": "https://m.gkd.li/57941037/485963ab-07b1-412a-a932-badc50cb2688",
+          "snapshotUrls": "https://i.gkd.li/i/13399391",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "actionMaximumKey": 0,
+          "priorityTime": 10000
+        },
+        {
+          "matches": "FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][visibleToUser=true] + TextView[visibleToUser=true][text=null]",
+          "snapshotUrls": "https://i.gkd.li/i/14546304",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "priorityTime": 10000,
+          "actionMaximumKey": 0
+        },
+        {
+          "fastQuery": true,
+          "position": {
+            "left": "width * 0.8778",
+            "top": "width * 0.1667"
+          },
+          "matches": "[id$=\"spalsh_ad_view\"] >4 [id$=\"native_container\"] >2 [id=\"cn.xiaochuankeji.zuiyouLite:id/contentView\"]",
+          "exampleUrls": "https://m.gkd.li/57941037/485963ab-07b1-412a-a932-badc50cb2688",
+          "snapshotUrls": "https://i.gkd.li/i/13399391",
+          "matchTime": 10000,
+          "actionMaximum": 1,
+          "resetMatch": "app",
+          "actionMaximumKey": 3,
+          "priorityTime": 10000
+        }
+      ]
+    },
+    {
+      "key": 1,
+      "name": "分段广告-信息流广告",
+      "fastQuery": true,
+      "activityIds": ".ui.slide.ActivitySlideDetail",
+      "rules": [
+        {
+          "name": "点击关闭",
+          "matches": "[vid=\"ad_remove\"]",
+          "snapshotUrls": "https://i.gkd.li/i/13387116",
+          "fastQuery": true,
+          "activityIds": ".ui.slide.ActivitySlideDetail"
+        },
+        {
+          "preKeys": 0,
+          "name": "点击[不喜欢广告主]",
+          "matches": "@LinearLayout[clickable=true] > [text=\"不喜欢广告主\"]",
+          "snapshotUrls": "https://i.gkd.li/i/13387155",
+          "fastQuery": true,
+          "activityIds": ".ui.slide.ActivitySlideDetail"
+        },
+        {
+          "name": "点击\"x\"",
+          "matches": "[id=\"cn.xiaochuankeji.zuiyouLite:id/ad_remove\"]",
+          "snapshotUrls": "https://i.gkd.li/i/13387116",
+          "fastQuery": true,
+          "activityIds": "cn.xiaochuankeji.zuiyouLite.ui.slide.ActivitySlideDetail"
+        },
+        {
+          "preKeys": 2,
+          "name": "点击\"不喜欢广告主\"",
+          "matches": "@LinearLayout[clickable=true] > [text=\"不喜欢广告主\"]",
+          "snapshotUrls": "https://i.gkd.li/i/13387155",
+          "fastQuery": true,
+          "activityIds": "cn.xiaochuankeji.zuiyouLite.ui.slide.ActivitySlideDetail"
+        }
+      ]
+    },
+    {
+      "key": 2,
+      "name": "青少年模式",
+      "enable": false,
+      "fastQuery": true,
+      "actionMaximum": 1,
+      "resetMatch": "app",
+      "snapshotUrls": [
+        "https://i.gkd.li/i/12745083",
+        "https://i.gkd.li/i/13446652"
+      ],
+      "rules": [
+        {
+          "matches": "[id=\"cn.xiaochuankeji.zuiyouLite:id/young_close_btn\"]",
+          "fastQuery": true,
+          "actionMaximum": 1,
+          "resetMatch": "app"
+        }
+      ]
+    }
+  ]
+});
