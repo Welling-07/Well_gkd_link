@@ -23,25 +23,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-教程弹窗",
-      "enable": false,
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "matchTime": 10000,
-      "resetMatch": "app",
-      "snapshotUrls": "https://i.gkd.li/i/15521827",
-      "rules": [
-        {
-          "matches": "[text=\"關閉\"]",
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "matchTime": 10000,
-          "resetMatch": "app"
-        }
-      ]
     }
   ]
 });

@@ -462,98 +462,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 8,
-      "name": "功能类-误入直播后自动[退出]",
-      "desc": "配合 看广告自动领奖励 使用",
-      "fastQuery": true,
-      "activityIds": "com.bytedance.mira.stub.p0.StubSingleTaskActivity1",
-      "rules": [
-        {
-          "name": "①已进直播间-按[返回键]",
-          "action": "back",
-          "actionDelay": 500,
-          "matches": "[id=\"com.dragon.read.live:id/swipe_refresh\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/28906839",
-          "fastQuery": true,
-          "activityIds": "com.bytedance.mira.stub.p0.StubSingleTaskActivity1"
-        },
-        {
-          "name": "②点击确认[退出]",
-          "matches": "[text=\"退出\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/28906845",
-          "fastQuery": true,
-          "activityIds": "com.bytedance.mira.stub.p0.StubSingleTaskActivity1"
-        }
-      ]
-    },
-    {
-      "key": 9,
-      "name": "功能类-看广告自动领奖励",
-      "fastQuery": true,
-      "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity",
-      "rules": [
-        {
-          "name": "①隔10秒点击右上角x掉",
-          "actionDelay": 10000,
-          "matches": "@ImageView[width<40 && height<40] <n ViewGroup <(4,5) ViewGroup < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout < [id=\"android:id/content\"]",
-          "exampleUrls": "https://e.gkd.li/c3e53a6c-cc60-413d-8464-2b4a1259c038",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/24689154",
-            "https://i.gkd.li/i/24688948",
-            "https://i.gkd.li/i/24689141",
-            "https://i.gkd.li/i/24689202"
-          ],
-          "fastQuery": true,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        },
-        {
-          "name": "②已得奖励-点击x掉",
-          "matches": "@ImageView < ViewGroup[desc*=\"关闭\" && desc!*=\"秒\"]",
-          "position": {
-            "left": "width * 0.5",
-            "top": "width * 0.5"
-          },
-          "exampleUrls": "https://e.gkd.li/9cd91c80-9cba-48e8-97cd-dac5968694e4",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/26530262",
-            "https://i.gkd.li/i/26530263"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/26528931",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        },
-        {
-          "preKeys": [
-            0,
-            1
-          ],
-          "name": "③坐标点击[继续观看]",
-          "actionDelay": 500,
-          "position": {
-            "left": "width * 0.5",
-            "bottom": "width * 0.3182"
-          },
-          "matches": "ImageView - @ViewGroup[childCount=1][width>600 && height>600][getChild(0).name$=\"ImageView\"] -(1,2) ScrollView",
-          "exampleUrls": "https://e.gkd.li/f2859af8-7ca7-40d3-9737-7be8b0200bae",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/24689140",
-            "https://i.gkd.li/i/24689143",
-            "https://i.gkd.li/i/24689393",
-            "https://i.gkd.li/i/28378131"
-          ],
-          "fastQuery": true,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        },
-        {
-          "name": "④已无新视频-退出",
-          "matches": "@[clickable=true][width<120 && height<120] + LinearLayout > [text=\"当前无新视频\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/24689246",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        }
-      ]
-    },
-    {
       "key": 10,
       "name": "评价提示-点评此书弹窗",
       "desc": "点击[取消]",
@@ -573,52 +481,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 11,
-      "name": "功能类-观看广告自动静音",
-      "desc": "点击1次, activity刷新后会重置",
-      "fastQuery": true,
-      "actionDelay": 300,
-      "actionMaximum": 1,
-      "actionMaximumKey": 0,
-      "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity",
-      "rules": [
-        {
-          "name": "刚退出直播间-不点击[静音]",
-          "action": "none",
-          "matches": "[parent=null]",
-          "fastQuery": true,
-          "actionDelay": 300,
-          "actionMaximum": 1,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        },
-        {
-          "name": "①点击[静音]",
-          "matches": "@ImageView[visibleToUser=true][width>20 && width<93 && height>20 && height<108][right<prev.width.div(3)][bottom<prev.height.div(10)] <<n [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/28907595",
-          "fastQuery": true,
-          "actionDelay": 300,
-          "actionMaximum": 1,
-          "actionMaximumKey": 0,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        },
-        {
-          "name": "②坐标点击[静音]",
-          "position": {
-            "left": "width * 0.5",
-            "top": "width * 0.8730"
-          },
-          "matches": "@ImageView[width>20 && width<93 && height<0][right<prev.width.div(3)][bottom<prev.height.div(10)] <<n [id=\"android:id/content\"]",
-          "exampleUrls": "https://e.gkd.li/d8949efa-e2f7-49d2-a8d7-4837ed349aef",
-          "snapshotUrls": "https://i.gkd.li/i/26528931",
-          "fastQuery": true,
-          "actionDelay": 300,
-          "actionMaximum": 1,
-          "actionMaximumKey": 0,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity"
-        }
-      ]
-    },
-    {
       "key": 12,
       "name": "其他-添加桌面小组件",
       "desc": "点击[取消]",
@@ -629,32 +491,6 @@ export default defineGkdApp({
           "matches": "[text^=\"添加到\"] +n [childCount=2] > [text=\"取消\"][clickable=true]",
           "snapshotUrls": "https://i.gkd.li/i/28784392",
           "exampleUrls": "https://e.gkd.li/b4cb96bd-0ced-4228-bd4a-a1be162bb75a"
-        }
-      ]
-    },
-    {
-      "key": 13,
-      "name": "功能类-刷短剧时半自动[不喜听书]",
-      "desc": "前提需手动长按小说标签的视频, ①点击[不感兴趣] ②选择[不喜欢听书]",
-      "activityIds": ".pages.main.MainFragmentActivity",
-      "fastQuery": true,
-      "rules": [
-        {
-          "name": "①点击[不感兴趣]",
-          "matches": "@[clickable=true] > TextView[vid=\"action_text\"][text=\"不感兴趣\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/34419649",
-          "exampleUrls": "https://e.gkd.li/77dca54c-86b8-40a6-b00a-44e4f8adedf8",
-          "activityIds": ".pages.main.MainFragmentActivity",
-          "fastQuery": true
-        },
-        {
-          "preKeys": 0,
-          "name": "②点击[不喜欢听书]",
-          "matches": "[text=\"不喜欢听书\"] < @[clickable=true][childCount=1] <n * - [text=\"选择不喜欢的理由\"] <2 View < ComposeView < * < * < [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/34419676",
-          "exampleUrls": "https://e.gkd.li/77dca54c-86b8-40a6-b00a-44e4f8adedf8",
-          "activityIds": ".pages.main.MainFragmentActivity",
-          "fastQuery": true
         }
       ]
     },
@@ -756,20 +592,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 16,
-      "name": "功能类-阅读页面关注作者弹窗",
-      "enable": false,
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": "com.dragon.read.reader.ui.ReaderActivity",
-          "matches": "@ImageView +2 FrameLayout >3 [text=\"关注\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13399505",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 17,
       "name": "全屏广告-会员福利弹窗",
       "desc": "点击关闭",
@@ -797,35 +619,6 @@ export default defineGkdApp({
         {
           "matches": "@[text=\"取消\"] < * -2 * > [text=\"开启推送提醒\"]",
           "activityIds": "com.dragon.read.widget.ConfirmDialogBuilder"
-        }
-      ]
-    },
-    {
-      "key": 19,
-      "name": "功能类-书城-底部继续阅读浮窗",
-      "desc": "点击【继续阅读】旁边的x",
-      "enable": false,
-      "resetMatch": "app",
-      "activityIds": "com.dragon.read.pages.main.MainFragmentActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14031943",
-      "rules": [
-        {
-          "matches": "[vid=\"container\"] > ImageView",
-          "resetMatch": "app",
-          "activityIds": "com.dragon.read.pages.main.MainFragmentActivity"
-        }
-      ]
-    },
-    {
-      "key": 20,
-      "name": "功能类-阅读页面广告-点击下一页",
-      "enable": false,
-      "activityIds": "com.dragon.read.reader.ui.ReaderActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13674556",
-      "rules": [
-        {
-          "matches": "[id=\"com.dragon.read:id/readFlowNonRoundEntranceLayout\"] [id=\"com.dragon.read:id/relativeRight\"]",
-          "activityIds": "com.dragon.read.reader.ui.ReaderActivity"
         }
       ]
     },

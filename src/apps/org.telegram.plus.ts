@@ -6,40 +6,6 @@ export default defineGkdApp({
   "name": "Telegram+ (Plus Messenger)",
   "groups": [
     {
-      "key": 0,
-      "name": "功能类-更多-保存到相册",
-      "desc": "右上角菜单-点击[保存到相册]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "matches": "@[clickable=true][left>350] > [text=\"保存到相册\"]",
-          "snapshotUrls": "https://i.gkd.li/i/24337783",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/24450853",
-          "exampleUrls": "https://e.gkd.li/d09a281b-5652-4072-ae19-42d944f01d95",
-          "activityIds": "org.telegram.ui.LaunchActivity"
-        }
-      ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-更多-只保存单个媒体",
-      "desc": "弹窗-点击 [这张图片]或[这个媒体]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "matches": "[text^=\"保存\" || text^=\"Save\"] < * +2 * > [text^=\"这\" || text^=\"This\"][clickable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22945715",
-            "https://i.gkd.li/i/22945853",
-            "https://i.gkd.li/i/25730622",
-            "https://i.gkd.li/i/25742054"
-          ],
-          "exampleUrls": "https://e.gkd.li/9225eb21-84e6-4baa-88c5-f5dc2230c111",
-          "activityIds": "org.telegram.ui.LaunchActivity"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "权限提示-通讯录权限",
       "desc": "点击[稍后]",

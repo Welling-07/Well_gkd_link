@@ -320,23 +320,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-京东账号登录授权",
-      "desc": "自动点击\"确认登录\"",
-      "activityIds": ".WebActivity",
-      "snapshotUrls": "https://i.gkd.li/i/12901734",
-      "rules": [
-        {
-          "matches": "@[desc=\"确认登录\"][clickable=true] > [text=\"确认登录\"]",
-          "activityIds": ".WebActivity"
-        },
-        {
-          "matches": "[text=\"京东登录\"] > [desc=\"确认登录\"]",
-          "activityIds": "com.jingdong.app.mall.WebActivity"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "局部广告-支付页面产品推荐",
       "desc": "自动点击右上角\"x\"",
@@ -379,96 +362,6 @@ export default defineGkdApp({
           "activityIds": "com.jd.lib.productdetail.ProductDetailActivity",
           "matches": "[text=\"继续逛\"]",
           "snapshotUrls": "https://i.gkd.li/i/15047243"
-        }
-      ]
-    },
-    {
-      "key": 10,
-      "name": "功能类-支付订单后点击[完成/回首页]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".bundle.cashierfinish.view.CashierUserContentCompleteActivity",
-          "matches": "[vid=\"lib_cashier_finish_back_page_text\" || text=\"回首页\"][clickable=true][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/17358003",
-            "https://i.gkd.li/i/29404312"
-          ],
-          "exampleUrls": [
-            "https://e.gkd.li/ab886df0-2b34-4804-be7d-742a06fadda9",
-            "https://e.gkd.li/6c5466d4-3238-43b7-8cf5-312f8c8606ef"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 11,
-      "name": "功能类-支付订单后跳过开通[刷脸支付]",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "activity",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.wangyin.payment.jdpaysdk.counter.ui.pay.CounterActivity",
-          "action": "back",
-          "matches": "[text=\"开启刷脸支付\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/bad5489e-0ec6-4039-8e4e-52b4b444f019",
-          "snapshotUrls": "https://i.gkd.li/i/20709175",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "activity"
-        }
-      ]
-    },
-    {
-      "key": 12,
-      "name": "功能类-展开全部订单信息",
-      "desc": "订单已完成-点击全部订单信息",
-      "rules": [
-        {
-          "actionMaximum": 1,
-          "resetMatch": "match",
-          "fastQuery": true,
-          "activityIds": [
-            "com.jd.lib.ordercenter.taro.OrderDetailActivityTaro"
-          ],
-          "matches": "[text=\"全部订单信息\" || desc=\"全部订单信息\"][clickable=true][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/24372039",
-            "https://i.gkd.li/i/29404102"
-          ],
-          "exampleUrls": [
-            "https://e.gkd.li/e1a3b6f7-b6cb-4379-90b5-cb4b927dacc4",
-            "https://e.gkd.li/f1b6b284-ce65-48e6-83b8-1c6052fbbfa3"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 13,
-      "name": "功能类-确认收货成功-返回",
-      "desc": "点击左上角 返回",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.jd.lib.ordercenter.confirmreceive.ConfirmReceiveActivity",
-          "matches": "@[desc=\"返回\"][clickable=true] + * > [text=\"确认收货成功\"]",
-          "snapshotUrls": "https://i.gkd.li/i/25181413"
-        }
-      ]
-    },
-    {
-      "key": 14,
-      "name": "功能类-支付订单后点击[完成]",
-      "enable": false,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".bundle.cashierfinish.view.CashierUserContentCompleteActivity",
-          "matches": "[vid=\"lib_cashier_finish_back_page_text\"]",
-          "exampleUrls": "https://e.gkd.li/ab886df0-2b34-4804-be7d-742a06fadda9",
-          "snapshotUrls": "https://i.gkd.li/i/17358003"
         }
       ]
     },

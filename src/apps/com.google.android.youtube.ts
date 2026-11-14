@@ -171,49 +171,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-自动翻译评论",
-      "desc": "评论区自动点击[翻译成/Translate to]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionCd": 500,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity",
-          "anyMatches": [
-            "@[desc^=\"翻译成\"||desc^=\"Translate to\"][visibleToUser=true] <n [childCount>3 && childCount<8] < [childCount=2] <(1,2) ViewGroup <n [vid=\"results\" || vid=\"section_list\"]",
-            "@[desc^=\"翻译成\"||desc^=\"Translate to\"][visibleToUser=true] <n [childCount=5] < [childCount=2] <2 [childCount=2] < ViewGroup <n [vid=\"results\" || vid=\"section_list\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/17068544",
-            "https://i.gkd.li/i/17068647",
-            "https://i.gkd.li/i/17501400",
-            "https://i.gkd.li/i/25462152",
-            "https://i.gkd.li/i/25462248",
-            "https://i.gkd.li/i/27276291",
-            "https://i.gkd.li/i/29379961",
-            "https://i.gkd.li/i/27276425"
-          ],
-          "exampleUrls": [
-            "https://e.gkd.li/e9d6eaa8-9fbf-4b16-8f0c-50239597c687",
-            "https://e.gkd.li/ecc0e725-1a92-4b29-b5df-ae167ea8584a",
-            "https://e.gkd.li/d2260fc4-0218-4d0b-9d37-e6366d397ae4"
-          ]
-        },
-        {
-          "fastQuery": true,
-          "actionCd": 500,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity",
-          "matches": "@Button[desc^=\"翻译成中文\"][clickable=true][visibleToUser=true] <<n [vid=\"results\" || vid=\"section_list\"]",
-          "exampleUrls": "https://e.gkd.li/e9d6eaa8-9fbf-4b16-8f0c-50239597c687",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/17068544",
-            "https://i.gkd.li/i/17068647",
-            "https://i.gkd.li/i/17501400"
-          ]
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "其他-关闭播放器无障碍辅助弹窗",
       "desc": "点击[Dismiss/关闭]",
@@ -226,25 +183,6 @@ export default defineGkdApp({
           "snapshotUrls": [
             "https://i.gkd.li/i/19930694",
             "https://i.gkd.li/i/25461814"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-关闭视频播放结束后的推荐视频",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity",
-          "anyMatches": [
-            "@[vid=\"close_button\"] - LinearLayout >2 [text=\"Suggested video\" || text=\"推荐视频\"][visibleToUser=true]",
-            "[vid=\"engagement_close_button\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22757392",
-            "https://i.gkd.li/i/22762876",
-            "https://i.gkd.li/i/22757397"
           ]
         }
       ]
@@ -287,67 +225,6 @@ export default defineGkdApp({
           ],
           "fastQuery": true,
           "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 9,
-      "name": "功能类-自动展开更多回复",
-      "desc": "仅回复评论区有效",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity",
-          "matches": "Button[childCount=3] < @ViewGroup[clickable=true][visibleToUser=true] -n ViewGroup < [vid=\"section_list\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25462396",
-            "https://i.gkd.li/i/25466817"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 10,
-      "name": "功能类-跳过视频内容警告",
-      "desc": "该内容可能不适合/包含x腥/bao力",
-      "fastQuery": true,
-      "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity",
-      "rules": [
-        {
-          "matches": "[text^=\"该内容可能\" || text^=\"This content may be\"] +2 [childCount=2] > [text=\"继续\" || text=\"Continue\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/27373127",
-            "https://i.gkd.li/i/27373130"
-          ],
-          "exampleUrls": "https://e.gkd.li/6ae91912-dbe8-4bd5-983c-06790e39e2a7",
-          "fastQuery": true,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity"
-        },
-        {
-          "matches": "[text^=\"以下内容可能包含\" || text^=\"The following content may contain\"] <<4 [id=\"android:id/contentPanel\"] + [id=\"android:id/buttonPanel\"] >2 [text=\"确认\" || text=\"Confirm\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/27373143",
-            "https://i.gkd.li/i/27373252"
-          ],
-          "exampleUrls": "https://e.gkd.li/5f20a4f8-82ea-4520-b191-95782a45341c",
-          "fastQuery": true,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 11,
-      "name": "功能类-退出自动关闭小窗",
-      "desc": "退出视频自动关闭小窗播放器",
-      "actionCd": 8000,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.google.android.apps.youtube.app.watchwhile.MainActivity",
-          "matches": "[vid=\"modern_miniplayer_close\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/27373872",
-          "exampleUrls": "https://e.gkd.li/b72d41d0-94a1-4507-8e8c-530bd18269f0",
-          "actionCd": 8000
         }
       ]
     },

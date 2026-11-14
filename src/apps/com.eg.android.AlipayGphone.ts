@@ -303,49 +303,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-支付后自动点击完成",
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": [
-            "com.alipay.android.msp.ui.views.MspContainerActivity",
-            "com.alipay.android.phone.businesscommon.ucdp.nfc.activity.NResPageActivity"
-          ],
-          "matches": [
-            "[text=\"支付成功\" || text=\"充值成功\" || text=\"提交成功\"]",
-            "[text=\"完成\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14008852",
-            "https://i.gkd.li/i/16328809",
-            "https://i.gkd.li/i/17503266",
-            "https://i.gkd.li/i/17686972"
-          ],
-          "fastQuery": true
-        },
-        {
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": [
-            "[text=\"支付成功\" || text=\"充值成功\"]",
-            "[text=\"完成\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14008852",
-            "https://i.gkd.li/i/16328809",
-            "https://i.gkd.li/i/17503266"
-          ],
-          "fastQuery": true
-        },
-        {
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": "[id=\"com.alipay.android.app:id/rl_nav_bar\"] > [id=\"com.alipay.android.app:id/nav_right_textview\"]",
-          "snapshotUrls": "https://i.gkd.li/i/14008852",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "全屏广告-弹窗广告",
       "desc": "点击关闭",
@@ -723,21 +680,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 16,
-      "name": "功能类-自动授权登录",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "action": "clickCenter",
-          "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
-          "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
-          "matches": "[text=\"支付宝授权\"] >3 @[childCount=0][text=\"同意\"] <<n [id=\"com.alipay.mobile.nebula:id/h5_pc_container\"]",
-          "snapshotUrls": "https://i.gkd.li/i/17376764"
-        }
-      ]
-    },
-    {
       "key": 17,
       "name": "局部广告-直播悬浮窗",
       "desc": "点击关闭",
@@ -766,72 +708,6 @@ export default defineGkdApp({
           "snapshotUrls": "https://i.gkd.li/i/24548034",
           "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
           "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$"
-        }
-      ]
-    },
-    {
-      "key": 18,
-      "name": "功能类-余额宝转出自动勾选[短期不再提示]",
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
-          "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
-          "matches": [
-            "[text^=\"该笔为你快速转出\"]",
-            "@CheckBox + [text$=\"不再提示\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22798330",
-            "https://i.gkd.li/i/22798432",
-            "https://i.gkd.li/i/24230171"
-          ],
-          "actionMaximum": 1
-        }
-      ]
-    },
-    {
-      "key": 19,
-      "name": "功能类-自动领取会员积分",
-      "desc": "点击[全部领取]",
-      "rules": [
-        {
-          "activityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
-          "excludeActivityIds": "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$",
-          "matches": "@[text*=\"领取\"] < [childCount=1] <n View <<2 * - * >2 [text=\"我的积分\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22951439",
-            "https://i.gkd.li/i/22960401",
-            "https://i.gkd.li/i/23455621",
-            "https://i.gkd.li/i/23577538"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 20,
-      "name": "功能类-无法访问时点击[返回]",
-      "desc": "访问被拒绝/人气太旺啦",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": [
-            "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
-            "com.alipay.mobile.nebulax.xriver.activity.XRiverTransActivity$Main",
-            ".AlipayLogin",
-            "com.alipay.android.phone.wallet.blessingcard_receive.biz.activity.ReceiveDialogActivity",
-            "com.alipay.android.living.activity.LivingDetailActivity"
-          ],
-          "matches": "[text=\"访问被拒绝\" || text^=\"人气太旺啦\"] -2 RelativeLayout >3 @[clickable=true][desc=\"返回\"] > [text=\"\"]",
-          "exampleUrls": "https://e.gkd.li/c1ddb8bf-084b-4109-b777-96c02858d266",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/23046994",
-            "https://i.gkd.li/i/23096790",
-            "https://i.gkd.li/i/23549719",
-            "https://i.gkd.li/i/24183318",
-            "https://i.gkd.li/i/25199767",
-            "https://i.gkd.li/i/25485052"
-          ]
         }
       ]
     },
@@ -866,22 +742,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 23,
-      "name": "功能类-确认清理已选中的缓存",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main",
-          "matches": [
-            "[text=\"是否确认清理已选中的缓存\"][visibleToUser=true]",
-            "[text=\"确定\"][visibleToUser=true]"
-          ],
-          "exampleUrls": "https://e.gkd.li/4dfc8429-e633-4cab-8f0e-7cf1f86f98ce",
-          "snapshotUrls": "https://i.gkd.li/i/23619464"
-        }
-      ]
-    },
-    {
       "key": 24,
       "name": "局部广告-底部横幅广告",
       "fastQuery": true,
@@ -900,69 +760,6 @@ export default defineGkdApp({
           "snapshotUrls": "https://i.gkd.li/i/26330637",
           "fastQuery": true,
           "activityIds": ".AlipayLogin"
-        }
-      ]
-    },
-    {
-      "key": 25,
-      "name": "功能类-小游戏申请发消息-拒绝",
-      "desc": "①保持以上选择 ②点击[取消] ③直接拒绝",
-      "fastQuery": true,
-      "activityIds": [
-        "com.alipay.android.phone.messageboxstatic.extension.ProcessTransActivity",
-        "com.alipay.android.phone.mbox.biz.legacy.sbs."
-      ],
-      "rules": [
-        {
-          "name": "①保持以上选择-✅",
-          "matches": "@CheckBox[clickable=true][checked=false] + [text$=\"不再询问\"]",
-          "snapshotUrls": "https://i.gkd.li/i/25098582",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/25098563",
-          "exampleUrls": "https://e.gkd.li/d0e5b909-7d7d-4fcb-9368-631e50d020d6",
-          "fastQuery": true,
-          "activityIds": [
-            "com.alipay.android.phone.messageboxstatic.extension.ProcessTransActivity",
-            "com.alipay.android.phone.mbox.biz.legacy.sbs."
-          ]
-        },
-        {
-          "name": "②取消",
-          "matchDelay": 200,
-          "matches": "[text=\"发送一次以下消息\"] +n * > Button[text=\"取消\"][clickable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22981739",
-            "https://i.gkd.li/i/23238549"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            "com.alipay.android.phone.messageboxstatic.extension.ProcessTransActivity",
-            "com.alipay.android.phone.mbox.biz.legacy.sbs."
-          ]
-        },
-        {
-          "name": "③直接拒绝",
-          "matchDelay": 200,
-          "matches": "[text=\"发送以下消息\"] +n * > [text$=\"不再询问\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/25199524",
-          "fastQuery": true,
-          "activityIds": [
-            "com.alipay.android.phone.messageboxstatic.extension.ProcessTransActivity",
-            "com.alipay.android.phone.mbox.biz.legacy.sbs."
-          ]
-        }
-      ]
-    },
-    {
-      "key": 26,
-      "name": "功能类-设置支付宝小组件",
-      "desc": "点击关闭",
-      "enable": false,
-      "rules": [
-        {
-          "activityIds": "com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main",
-          "matches": "[text=\"添加会员小组件\"] < View +3 View[childCount=2] > [text=\"近期不再提醒我\"]",
-          "exampleUrls": "https://e.gkd.li/de3df4c8-6ab4-45a0-aec5-0fbdfa75e823",
-          "snapshotUrls": "https://i.gkd.li/i/16427922"
         }
       ]
     },
@@ -988,25 +785,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 28,
-      "name": "功能类-关闭免密支付开关",
-      "enable": false,
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": "@[checked=true] < * - [text$=\"免密支付\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/1e3a5f01-c42b-4d41-9d7d-21ff96c0075f",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14630824",
-            "https://i.gkd.li/i/14630825"
-          ],
-          "actionMaximum": 1
-        }
-      ]
-    },
-    {
       "key": 29,
       "name": "分段广告-服务消息页面-卡片广告",
       "desc": "点击[关闭]-点击[不感兴趣]",
@@ -1028,21 +806,6 @@ export default defineGkdApp({
           "snapshotUrls": "https://i.gkd.li/i/14787585",
           "fastQuery": true,
           "activityIds": "com.alipay.android.phone.messageboxapp.ui.MsgBoxTabActivity"
-        }
-      ]
-    },
-    {
-      "key": 30,
-      "name": "功能类-[0元下单权益]弹窗",
-      "desc": "点击关闭",
-      "enable": false,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": "[text=\"关闭\"] < @FrameLayout[clickable=true] <3 FrameLayout[childCount=3] < * + FrameLayout[childCount=3] [text*=\"0元下单\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/3575bbbc-717b-466d-b863-443a15629ef6",
-          "snapshotUrls": "https://i.gkd.li/i/14893122"
         }
       ]
     }

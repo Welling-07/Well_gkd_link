@@ -192,35 +192,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-通勤卡添加至桌面",
-      "desc": "点击取消",
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "activityIds": "com.baidu.baidumaps.MapsActivity",
-          "matches": [
-            "[text=\"添加至桌面\"]",
-            "[text=\"取消\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13439258",
-            "https://i.gkd.li/i/16920986"
-          ],
-          "fastQuery": true,
-          "actionMaximum": 1
-        },
-        {
-          "activityIds": "com.baidu.baidumaps.MapsActivity",
-          "matches": "TextView[id=\"com.baidu.BaiduMap:id/tv_dialog_cancel\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13439258",
-          "fastQuery": true,
-          "actionMaximum": 1
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "全屏广告",
       "rules": [

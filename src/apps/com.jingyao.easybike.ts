@@ -228,22 +228,6 @@ export default defineGkdApp({
           "fastQuery": true
         }
       ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-新人教学弹窗",
-      "desc": "点击跳过",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.alipay.mobile.nebulacore.ui.H5Activity",
-      "snapshotUrls": "https://i.gkd.li/i/13837543",
-      "rules": [
-        {
-          "matches": "@View[text=\"跳过\"] <2 View <2 View <<n FrameLayout[id=\"com.jingyao.easybike:id/h5_pc_container\"]",
-          "fastQuery": true,
-          "activityIds": "com.alipay.mobile.nebulacore.ui.H5Activity"
-        }
-      ]
     }
   ]
 });

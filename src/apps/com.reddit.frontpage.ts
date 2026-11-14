@@ -38,20 +38,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-自动点击翻译",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.reddit.launch.main.MainActivity",
-          "matches": "@[id=\"translation_banner_action\"][clickable=true] > [visibleToUser=true][text=\"翻译\"] <<n [vid=\"fragment_pager\"]",
-          "exampleUrls": "https://e.gkd.li/8fcef25c-ff16-4456-8174-cac27aa7fc66",
-          "snapshotUrls": "https://i.gkd.li/i/22451437",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/22451467"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "分段广告-卡片广告",
       "desc": "①点击卡片右上角 ②点击[隐藏]",

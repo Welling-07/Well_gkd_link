@@ -158,19 +158,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-退出app提示",
-      "fastQuery": true,
-      "snapshotUrls": "https://i.gkd.li/i/13927148",
-      "rules": [
-        {
-          "fastQuery": true,
-          "matches": "[text=\"是否确认退出向日葵？\"] + LinearLayout > [vid=\"button_ok\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13927148"
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "全屏广告-远程控制结束后的广告",
       "desc": "点击关闭",
@@ -198,22 +185,6 @@ export default defineGkdApp({
             "https://i.gkd.li/i/13207785",
             "https://i.gkd.li/i/17159821"
           ],
-          "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-设备列表-卡片广告",
-      "enable": false,
-      "activityIds": "com.oray.sunlogin.application.Main",
-      "fastQuery": true,
-      "snapshotUrls": "https://i.gkd.li/i/13207785",
-      "exampleUrls": "https://github.com/gkd-kit/inspect/assets/38517192/071e5512-e1aa-4a8c-8440-009d6f0f35ff",
-      "rules": [
-        {
-          "matches": "[id=\"com.oray.sunlogin:id/fl_close_advertise\"]",
-          "activityIds": "com.oray.sunlogin.application.Main",
           "fastQuery": true
         }
       ]

@@ -175,22 +175,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-请求开启自动备份弹窗",
-      "desc": "点击关闭",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.chinamobile.mcloud.client.ui.MenuActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13627830",
-      "rules": [
-        {
-          "matches": "[text=\"开启自动备份\"] +n [id=\"com.chinamobile.mcloud:id/tv_skip\"]",
-          "fastQuery": true,
-          "activityIds": "com.chinamobile.mcloud.client.ui.MenuActivity"
-        }
-      ]
     }
   ]
 });

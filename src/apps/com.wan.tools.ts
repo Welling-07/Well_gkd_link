@@ -33,24 +33,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-自动识别解析链接",
-      "activityIds": "com.one.downloadtools.ui.activity.HomeActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13392085",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.one.downloadtools.ui.activity.HomeActivity",
-          "matches": "[text=\"识别解析\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13392085"
-        },
-        {
-          "matches": "@[text=\"识别解析\"] -2 * > [text^=\"检测到你复制链接\"]",
-          "activityIds": "com.one.downloadtools.ui.activity.HomeActivity"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "全屏广告-开通会员弹窗",
       "activityIds": "com.one.downloadtools.ui.activity.HomeActivity",

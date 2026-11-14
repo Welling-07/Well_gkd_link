@@ -36,36 +36,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-签到成功弹窗",
-      "desc": "点击[关闭]按钮",
-      "activityIds": "com.realtech.xiaocan.MainActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14290847",
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".MainActivity",
-          "matches": "[id=\"android:id/content\"] >5 View[childCount=6] > ImageView[index=5][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14290847",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "matches": "[id=\"android:id/content\"] >5 View[childCount=6] > ImageView[index=5][clickable=true]",
-          "activityIds": "com.realtech.xiaocan.MainActivity",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "matches": "View[childCount=6][desc!=\"\"] > View[index=4] + ImageView[index=5][clickable=true]",
-          "activityIds": "com.realtech.xiaocan.MainActivity",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "权限提示-定位权限",
       "desc": "底部横幅/全屏, 点击x掉",

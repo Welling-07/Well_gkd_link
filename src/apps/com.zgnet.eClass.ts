@@ -23,16 +23,6 @@ export default defineGkdApp({
           "priorityTime": 10000
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-退出确认弹窗",
-      "rules": [
-        {
-          "matches": "[text*=\"确定要退出\"] < LinearLayout +n LinearLayout > TextView[id$=\"tv_exit_sure\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12645513"
-        }
-      ]
     }
   ]
 });

@@ -42,35 +42,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-软件更新/安装后的用户引导",
-      "fastQuery": true,
-      "activityIds": "com.ct.client.activity.UserGuideActivity",
-      "snapshotUrls": "https://i.gkd.li/i/12508971",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".activity.UserGuideActivity",
-          "matches": "[vid=\"tvSkip\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12508971",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "matches": "[id=\"com.ct.client:id/tvSkip\"]",
-          "fastQuery": true,
-          "activityIds": "com.ct.client.activity.UserGuideActivity",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "更新提示",
       "matchTime": 10000,
@@ -210,39 +181,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-右下角客服悬浮窗",
-      "desc": "点击关闭",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".MainActivity",
-          "matches": "[vid=\"close\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/3a14e0ac-ce6a-411d-9f92-e50da5165119",
-          "snapshotUrls": "https://i.gkd.li/i/14133742"
-        },
-        {
-          "activityIds": ".activity.MainActivity",
-          "matches": "[vid=\"ivFloatClose\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/a97bf7a2-6e35-4922-ad0d-8677fca79f7c",
-          "snapshotUrls": "https://i.gkd.li/i/13043345"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.ct.client.MainActivity",
-          "matches": "[id=\"com.ct.client:id/close\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/3a14e0ac-ce6a-411d-9f92-e50da5165119",
-          "snapshotUrls": "https://i.gkd.li/i/14133742"
-        },
-        {
-          "activityIds": "com.ct.client.activity.MainActivity",
-          "matches": "[id=\"com.ct.client:id/ivFloatClose\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/a97bf7a2-6e35-4922-ad0d-8677fca79f7c",
-          "snapshotUrls": "https://i.gkd.li/i/13043345"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "局部广告-悬浮广告",
       "desc": "点击关闭",
@@ -264,47 +202,6 @@ export default defineGkdApp({
           "matches": "[vid=\"ivFloatClose\"]",
           "exampleUrls": "https://m.gkd.li/57941037/5dd9c9e3-f290-4b73-abdd-dc5e97a99772",
           "snapshotUrls": "https://i.gkd.li/i/15137220",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-英文版未登录时自动一键登录",
-      "desc": "仅在使用该卡移动数据时可用",
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".international.homepage.InternationalHomePageActivity",
-          "matches": "[text=\"Login\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22843837",
-            "https://i.gkd.li/i/22846926"
-          ],
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "preKeys": 0,
-          "fastQuery": true,
-          "activityIds": ".international.login.InternationalLoginActivity",
-          "matches": "@CheckBox[checked=false] + [text^=\"I agree that I have read and accepted\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22843889",
-            "https://i.gkd.li/i/22843896"
-          ],
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "preKeys": 1,
-          "fastQuery": true,
-          "activityIds": ".international.login.InternationalLoginActivity",
-          "matches": "[text=\"Login with Current Number\"]",
-          "snapshotUrls": "https://i.gkd.li/i/22843896",
           "actionMaximum": 1,
           "resetMatch": "app"
         }

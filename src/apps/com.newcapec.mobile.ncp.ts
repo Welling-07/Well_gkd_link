@@ -49,20 +49,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-密码过期提示弹窗",
-      "desc": "点击\"取消\"按钮",
-      "enable": false,
-      "activityIds": "com.wanxiao.ui.activity.IndexActivity",
-      "snapshotUrls": "https://i.gkd.li/i/12843399",
-      "rules": [
-        {
-          "matches": "[id=\"com.newcapec.mobile.ncp:id/dialog_oppotion\"]",
-          "activityIds": "com.wanxiao.ui.activity.IndexActivity"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "未分类-新版本提示",
       "desc": "新版本提示弹窗，点击右上角【X】按钮。（需手动开启）",

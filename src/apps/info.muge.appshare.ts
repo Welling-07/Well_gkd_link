@@ -194,83 +194,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-自动签到",
-      "fastQuery": true,
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".view.main.MainActivity",
-          "matches": "[text=\"签到\"][vid=\"tvSign\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13931265",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/22319703",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "activityIds": ".MainActivity",
-          "matches": "[desc=\"头像\"] +3 @View[clickable=true] > [text=\"签到\"]",
-          "snapshotUrls": "https://i.gkd.li/i/24376300",
-          "excludeSnapshotUrls": [
-            "https://i.gkd.li/i/22319703",
-            "https://i.gkd.li/i/24563260"
-          ],
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "preKeys": [
-            0,
-            1
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            ".view.main.MainActivity",
-            ".MainActivity"
-          ],
-          "anyMatches": [
-            "[text=\"确定\"]",
-            "@[clickable=true] > [childCount=0][text=\"我知道了\"]",
-            "[vid=\"tvClose\"][text=\"我知道了\"][clickable=true][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13931279",
-            "https://i.gkd.li/i/20259829",
-            "https://i.gkd.li/i/24376307",
-            "https://i.gkd.li/i/25125005"
-          ],
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "activityIds": "info.muge.appshare.view.main.MainActivity",
-          "matches": "[id=\"info.muge.appshare:id/tvSign\"][text=\"签到\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13931265",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "preKeys": 3,
-          "activityIds": "info.muge.appshare.view.main.MainActivity",
-          "matches": "[id=\"info.muge.appshare:id/tvClose\"][text=\"确定\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13931279",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "分段广告",
       "desc": "点击关闭-点击不感兴趣",
@@ -431,27 +354,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-自动点击[使用浏览器打开]",
-      "desc": "下载文件页面",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".view.browser.DownloadBrowserActivity",
-          "matches": "[text=\"浏览器打开\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/aae3c59c-8eac-452c-984e-84ee9b97e986",
-          "snapshotUrls": "https://i.gkd.li/i/14792822"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "info.muge.appshare.view.browser.DownloadBrowserActivity",
-          "matches": "[text=\"浏览器打开\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/aae3c59c-8eac-452c-984e-84ee9b97e986",
-          "snapshotUrls": "https://i.gkd.li/i/14792822"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "更新提示",
       "matchTime": 10000,
@@ -463,26 +365,6 @@ export default defineGkdApp({
           "activityIds": ".view.main.MainActivity",
           "matches": "@[vid=\"tvCancel\"] + [vid=\"tvUpdate\"][visibleToUser=true]",
           "snapshotUrls": "https://i.gkd.li/i/25123777",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-自动进入应用更新界面",
-      "desc": "点击[右下角火箭图标]",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "info.muge.appshare.MainActivity",
-          "matches": "Button - [desc=\"应用更新\"] < @View[clickable=true] <5 View < View < View < View < ComposeView < [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/32435116",
-          "exampleUrls": "https://e.gkd.li/362e7d1e-d4a4-4a27-90ca-b53af995d9f8",
           "matchTime": 10000,
           "actionMaximum": 1,
           "resetMatch": "app"

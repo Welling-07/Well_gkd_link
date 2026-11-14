@@ -89,37 +89,6 @@ export default defineGkdApp({
           "exampleUrls": "https://e.gkd.li/37b29a88-d564-4ef6-9ab3-ff88954c87fc"
         }
       ]
-    },
-    {
-      "key": 4,
-      "name": "功能类-[您是否年满 18 岁？]弹窗",
-      "desc": "点击[是]",
-      "enable": false,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.sec.android.app.samsungapps.SearchResultActivity",
-          "matches": "[text=\"您是否年满 18 岁？\"] +4 @[clickable=true] > [text=\"是\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/cee78493-fbe1-46a0-8dcf-a8b1f1f61f19",
-          "snapshotUrls": "https://i.gkd.li/i/14473690"
-        }
-      ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-年满18岁",
-      "desc": "点击【是】",
-      "enable": false,
-      "activityIds": "com.sec.android.app.samsungapps.SearchResultActivity",
-      "fastQuery": true,
-      "snapshotUrls": "https://i.gkd.li/i/14473690",
-      "rules": [
-        {
-          "matches": "[text=\"您是否年满 18 岁？\"] +4 [vid=\"positive\"][clickable=true]",
-          "activityIds": "com.sec.android.app.samsungapps.SearchResultActivity",
-          "fastQuery": true
-        }
-      ]
     }
   ]
 });

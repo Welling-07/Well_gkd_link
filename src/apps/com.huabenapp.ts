@@ -22,19 +22,6 @@ export default defineGkdApp({
           "activityIds": "com.huabenapp.MainActivity"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-阅读界面-底部社区问答",
-      "enable": false,
-      "activityIds": "com.huabenapp.MainActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14076166",
-      "rules": [
-        {
-          "matches": "[text*=\"社区问答\"] +2 ViewGroup",
-          "activityIds": "com.huabenapp.MainActivity"
-        }
-      ]
     }
   ]
 });

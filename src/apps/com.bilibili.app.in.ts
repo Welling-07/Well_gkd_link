@@ -160,39 +160,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-自动领取会员经验",
-      "snapshotUrls": [
-        "https://i.gkd.li/i/22886723",
-        "https://i.gkd.li/i/22886739"
-      ],
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.bilibili.vip.web.VipWebActivity",
-          "matches": "[text^=\"专属等级加速包\"] +n @TextView[childCount=0][text=\"领取\"] <<n [vid=\"webview\"]"
-        }
-      ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-自动关闭故事模式",
-      "desc": "播放视频时退出竖屏模式",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.bilibili.video.story.StoryVideoActivity",
-          "matches": "[vid=\"story_ctrl_router\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/4bfd6131-d4be-46be-affb-73338b01f49c",
-          "snapshotUrls": "https://i.gkd.li/i/18164075",
-          "matchTime": 10000,
-          "actionMaximum": 1
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "未分类-打开推送通知弹窗",
       "desc": "自动点击“暂不”",

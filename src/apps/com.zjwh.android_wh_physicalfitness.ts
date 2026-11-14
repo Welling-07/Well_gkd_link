@@ -435,22 +435,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-运动页面自动切换至校园跑",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.zjwh.android_wh_physicalfitness.mvi.home.HomeActivity",
-          "matches": [
-            "[text=\"学校要求\"][visibleToUser=false]",
-            "[text=\"校园跑\"][visibleToUser=true][clickable=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/28789636",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/28789633"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "开屏广告",
       "order": -10,

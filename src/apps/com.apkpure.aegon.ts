@@ -35,35 +35,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-更新与已安装界面-点击[查看更多]",
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": [
-            ".main.activity.MainTabActivity",
-            ".main.activity.AppManagerActivity",
-            ".cms.activity.CommonActivity",
-            ".main.activity.AppMoreActivity"
-          ],
-          "matches": "@ViewGroup[clickable=true] > [text=\"查看更多\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/15469126",
-          "fastQuery": true
-        },
-        {
-          "activityIds": [
-            "com.apkpure.aegon.main.activity.MainTabActivity",
-            "com.apkpure.aegon.main.activity.AppManagerActivity",
-            "com.apkpure.aegon.cms.activity.CommonActivity",
-            "com.apkpure.aegon.main.activity.AppMoreActivity"
-          ],
-          "matches": "@ViewGroup[clickable=true] > [text=\"查看更多\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/15469126",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "分段广告-更新界面软件推荐",
       "activityIds": [
@@ -154,23 +125,6 @@ export default defineGkdApp({
             "com.apkpure.aegon.main.activity.AppMoreActivity"
           ],
           "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-添加桌面快捷方式",
-      "desc": "下次添加",
-      "rules": [
-        {
-          "activityIds": ".main.activity.MainTabActivity",
-          "matches": "[vid=\"arg\"][text=\"下次添加\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13416401"
-        },
-        {
-          "activityIds": "com.apkpure.aegon.main.activity.MainTabActivity",
-          "matches": "[id=\"com.apkpure.aegon:id/arg\"][text=\"下次添加\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13416401"
         }
       ]
     },

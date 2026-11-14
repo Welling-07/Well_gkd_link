@@ -396,129 +396,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-自动点击查看原图",
-      "fastQuery": true,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".photoalbum.imageviewer.ImageViewer",
-          "matches": "@LinearLayout >3 [vid=\"tv_dialog_item\"][text^=\"原图\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13929119"
-        },
-        {
-          "activityIds": "com.sina.weibo.photoalbum.imageviewer.ImageViewer",
-          "matches": "@LinearLayout >3 [vid=\"tv_dialog_item\"][text^=\"原图\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13929119",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-超话自动签到",
-      "fastQuery": true,
-      "rules": [
-        {
-          "name": "点击签到",
-          "activityIds": ".supergroup.SGPageActivity",
-          "matches": [
-            "ViewGroup[childCount=2] > [text=\"管理\"][visibleToUser=true]",
-            "[text=\"签到\" || text=\"Sign in\"] < [vid=\"right_button\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/15092999",
-            "https://i.gkd.li/i/15092970",
-            "https://i.gkd.li/i/15136801"
-          ],
-          "fastQuery": true
-        },
-        {
-          "name": "取消勾选[接收本超话签到提醒推送]",
-          "activityIds": ".supergroup.pagepop.PagePopActivity",
-          "matches": "@[checked=true] < * > [text=\"接收本超话签到提醒推送\"]",
-          "snapshotUrls": "https://i.gkd.li/i/15103524",
-          "fastQuery": true
-        },
-        {
-          "name": "关闭签到成功弹窗",
-          "activityIds": ".supergroup.pagepop.PagePopActivity",
-          "matches": [
-            "[text^=\"连续签到\"]",
-            "[vid=\"iv_close_v2\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/15103524",
-            "https://i.gkd.li/i/15136825",
-            "https://i.gkd.li/i/15136842"
-          ],
-          "fastQuery": true
-        },
-        {
-          "name": "点击签到 (2)",
-          "activityIds": "com.sina.weibo.supergroup.SGPageActivity",
-          "matches": [
-            "ViewGroup[childCount=2] > [text=\"管理\"][visibleToUser=true]",
-            "[text=\"签到\" || text=\"Sign in\"] < [vid=\"right_button\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/15092999",
-            "https://i.gkd.li/i/15092970",
-            "https://i.gkd.li/i/15136801"
-          ],
-          "fastQuery": true
-        },
-        {
-          "name": "取消勾选[接收本超话签到提醒推送] (2)",
-          "activityIds": "com.sina.weibo.supergroup.pagepop.PagePopActivity",
-          "matches": "@[checked=true] < * > [text=\"接收本超话签到提醒推送\"]",
-          "snapshotUrls": "https://i.gkd.li/i/15103524",
-          "fastQuery": true
-        },
-        {
-          "name": "关闭签到成功弹窗 (2)",
-          "activityIds": "com.sina.weibo.supergroup.pagepop.PagePopActivity",
-          "matches": [
-            "[text^=\"连续签到\"]",
-            "[vid=\"iv_close_v2\"]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/15103524",
-            "https://i.gkd.li/i/15136825",
-            "https://i.gkd.li/i/15136842"
-          ],
-          "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-超话一键签到",
-      "desc": "点击[一键签到]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".supergroup.generic.GenericChannelActivity",
-          "matches": [
-            "[text*=\"一键签到\"][visibleToUser=true]",
-            "[vid=\"checkinBtn\"][visibleToUser=true]"
-          ],
-          "exampleUrls": "https://e.gkd.li/3fad288d-ba21-44ed-8ebe-f9b4cbde1d3c",
-          "snapshotUrls": "https://i.gkd.li/i/16420751"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.sina.weibo.supergroup.generic.GenericChannelActivity",
-          "matches": [
-            "[text*=\"一键签到\"][visibleToUser=true]",
-            "[vid=\"checkinBtn\"][visibleToUser=true]"
-          ],
-          "exampleUrls": "https://e.gkd.li/3fad288d-ba21-44ed-8ebe-f9b4cbde1d3c",
-          "snapshotUrls": "https://i.gkd.li/i/16420751"
-        }
-      ]
-    },
-    {
       "key": 8,
       "name": "其他-关闭猪手提示",
       "desc": "点击[取消]",
@@ -532,33 +409,6 @@ export default defineGkdApp({
           ],
           "exampleUrls": "https://e.gkd.li/92e08aea-ae70-4ea8-be65-442f8e2e423d",
           "snapshotUrls": "https://i.gkd.li/i/16827119"
-        }
-      ]
-    },
-    {
-      "key": 9,
-      "name": "功能类-关闭点赞时的验证",
-      "rules": [
-        {
-          "activityIds": ".geetest.GeetCheckActivityForNet",
-          "matches": "Button[text^=\"关闭验证\"][clickable=true][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/7a8ed873-a6e8-4260-9f5c-3ff05d5788db",
-          "snapshotUrls": "https://i.gkd.li/i/16827853"
-        }
-      ]
-    },
-    {
-      "key": 10,
-      "name": "功能类-关主页自动切换到[关注的人]TAB",
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".flowbusiness.commonpage.FlowCommonPageActivity",
-          "matches": "@[clickable=true] >2 [text=\"关注的人\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/6ef5bbf7-bb11-4cbb-b46b-bdc7c333a617",
-          "snapshotUrls": "https://i.gkd.li/i/18423013",
-          "actionMaximum": 1
         }
       ]
     },
@@ -833,24 +683,6 @@ export default defineGkdApp({
           "actionMaximum": 1,
           "resetMatch": "app",
           "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 21,
-      "name": "功能类-点赞任务奖励",
-      "desc": "点击x",
-      "enable": false,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "activityIds": "com.sina.weibo.feed.MPDialogActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13837867",
-      "rules": [
-        {
-          "matches": "[vid=\"container\"] >n [text=\"close\"]",
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": "com.sina.weibo.feed.MPDialogActivity"
         }
       ]
     }

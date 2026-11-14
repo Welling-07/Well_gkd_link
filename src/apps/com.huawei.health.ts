@@ -170,19 +170,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 7,
-      "name": "功能类-请求开启个性化推荐弹窗",
-      "enable": false,
-      "activityIds": "com.huawei.watchface.api.WebViewActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13546292",
-      "rules": [
-        {
-          "matches": "[text=\"开启个性化推荐\"] +2 [text=\"开启\"] + Button",
-          "activityIds": "com.huawei.watchface.api.WebViewActivity"
-        }
-      ]
-    },
-    {
       "key": 8,
       "name": "局部广告-底部横幅广告",
       "enable": false,
@@ -191,27 +178,6 @@ export default defineGkdApp({
           "activityIds": "com.huawei.health.MainActivity",
           "matches": "[id=\"com.huawei.health:id/marketing_close_icon\"]",
           "snapshotUrls": "https://i.gkd.li/i/13587206"
-        }
-      ]
-    },
-    {
-      "key": 9,
-      "name": "功能类-请求开启[实时推送步数]弹窗",
-      "desc": "点击取消",
-      "enable": false,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.huawei.health.MainActivity",
-          "matches": [
-            "[text*=\"实时推送步数\" || text*=\"通知栏实时显示步数\"]",
-            "[text=\"取消\"]"
-          ],
-          "exampleUrls": "https://m.gkd.li/57941037/7e9b7131-35ae-49dd-badf-13b6dae3aa96",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14321121",
-            "https://i.gkd.li/i/16494762"
-          ]
         }
       ]
     }

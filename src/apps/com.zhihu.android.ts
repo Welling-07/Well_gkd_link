@@ -645,52 +645,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 8,
-      "name": "功能类-热榜页自动点击[展开更多]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".app.ui.activity.MainActivity",
-          "matches": "@[clickable=true] >2 [text=\"展开更多\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/09616b29-8a83-4f0f-9f8e-0100fa61738d",
-          "snapshotUrls": "https://i.gkd.li/i/14974198"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.zhihu.android.app.ui.activity.MainActivity",
-          "matches": "@[clickable=true] >2 [text=\"展开更多\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/09616b29-8a83-4f0f-9f8e-0100fa61738d",
-          "snapshotUrls": "https://i.gkd.li/i/14974198"
-        }
-      ]
-    },
-    {
-      "key": 9,
-      "name": "功能类-自动展开回答",
-      "desc": "自动点击展开",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".mixshortcontainer.MixShortContainerActivity",
-          "matches": "ImageView[vid=\"iv_expand\"] - TextView[vid=\"tv_expand\"][text=\"展开\"][visibleToUser=true]",
-          "exampleUrls": "https://m.gkd.li/57941037/6f6e5fd0-98a8-4a92-be02-7f34e3c5b8bd",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/12647688",
-            "https://i.gkd.li/i/12707687"
-          ]
-        },
-        {
-          "activityIds": "com.zhihu.android.mixshortcontainer.MixShortContainerActivity",
-          "matches": "ImageView[id=\"com.zhihu.android:id/iv_expand\"] - TextView[id=\"com.zhihu.android:id/tv_expand\"][text=\"展开\"][visibleToUser=true]",
-          "exampleUrls": "https://m.gkd.li/57941037/6f6e5fd0-98a8-4a92-be02-7f34e3c5b8bd",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/12647688",
-            "https://i.gkd.li/i/12707687"
-          ]
-        }
-      ]
-    },
-    {
       "key": 10,
       "name": "评价提示-评论区氛围评价卡片",
       "desc": "点击关闭",

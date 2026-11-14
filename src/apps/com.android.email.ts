@@ -42,36 +42,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-自动切换到[合并账户]",
-      "desc": "仅在收件箱界面开屏时触发",
-      "fastQuery": true,
-      "activityIds": "com.wps.multiwindow.main.HomeActivity",
-      "rules": [
-        {
-          "matchTime": 5000,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "matches": "[!(text=\"合并账户\" || text=\"合并帐户\")] <2 [vid=\"titleContainer\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/25607057",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/28678424",
-          "fastQuery": true,
-          "activityIds": "com.wps.multiwindow.main.HomeActivity"
-        },
-        {
-          "preKeys": 0,
-          "actionDelay": 200,
-          "matches": "[text=\"合并账户\" || text=\"合并帐户\"][checkable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25607113",
-            "https://i.gkd.li/i/28678374"
-          ],
-          "fastQuery": true,
-          "activityIds": "com.wps.multiwindow.main.HomeActivity"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "评价提示",
       "desc": "点击[暂不评价]",

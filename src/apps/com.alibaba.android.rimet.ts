@@ -32,63 +32,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-文件即将过期提示",
-      "fastQuery": true,
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "matches": "@FrameLayout[vid=\"layout_close\"] -2 TextView[text=\"文件即将过期请备份\"]",
-          "action": "clickCenter",
-          "snapshotUrls": "https://i.gkd.li/i/13325125",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "matches": "@FrameLayout[id=\"com.alibaba.android.rimet:id/layout_close\"] -2 TextView[text=\"文件即将过期请备份\"]",
-          "action": "clickCenter",
-          "snapshotUrls": "https://i.gkd.li/i/13325125",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-自动点击原图",
-      "actionMaximum": 1,
-      "fastQuery": true,
-      "activityIds": "com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity",
-      "rules": [
-        {
-          "matches": "CheckBox[vid=\"cb_send_origin\"][text=\"原图\"][checked=false]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13309648",
-            "https://i.gkd.li/i/13309845"
-          ],
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "activityIds": "com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity"
-        },
-        {
-          "matches": "CheckBox[id=\"com.alibaba.android.rimet:id/cb_send_origin\"][text=\"原图\"][checked=false]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13309648",
-            "https://i.gkd.li/i/13309845"
-          ],
-          "actionMaximum": 1,
-          "fastQuery": true,
-          "activityIds": "com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "更新提示",
       "order": -9,
@@ -120,35 +63,6 @@ export default defineGkdApp({
           "matchTime": 10000,
           "actionMaximum": 1,
           "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 4,
-      "name": "功能类-扫码自动登录桌面版",
-      "fastQuery": true,
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "activity",
-      "activityIds": "com.alibaba.android.user.qrcode.WebLoginActivity",
-      "rules": [
-        {
-          "matches": "[vid=\"btn_login\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13433981",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "activity",
-          "activityIds": "com.alibaba.android.user.qrcode.WebLoginActivity"
-        },
-        {
-          "matches": "[id=\"com.alibaba.android.rimet:id/btn_login\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13433981",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "activity",
-          "activityIds": "com.alibaba.android.user.qrcode.WebLoginActivity"
         }
       ]
     }

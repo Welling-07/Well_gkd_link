@@ -126,24 +126,6 @@ export default defineGkdApp({
           "activityIds": "com.ucpro.BrowserActivity"
         }
       ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-设置默认浏览器提示",
-      "desc": "点击取消",
-      "enable": false,
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "activityIds": "com.ucpro.BrowserActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13249469",
-      "rules": [
-        {
-          "matches": "@Button[text=\"取消\"] + Button[text=\"去设置\"]",
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "activityIds": "com.ucpro.BrowserActivity"
-        }
-      ]
     }
   ]
 });

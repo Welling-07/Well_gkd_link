@@ -39,31 +39,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-退出软件时的确认弹窗",
-      "desc": "点击[确认退出]",
-      "fastQuery": true,
-      "activityIds": "com.sh.gj.MainActivity",
-      "exampleUrls": "https://m.gkd.li/57941037/38c20d82-947e-4e46-aba8-80e1a773552b",
-      "snapshotUrls": "https://i.gkd.li/i/14883160",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".MainActivity",
-          "matches": "[text=\"确认退出\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/38c20d82-947e-4e46-aba8-80e1a773552b",
-          "snapshotUrls": "https://i.gkd.li/i/14883160"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.sh.gj.MainActivity",
-          "matches": "[text=\"确认退出\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/38c20d82-947e-4e46-aba8-80e1a773552b",
-          "snapshotUrls": "https://i.gkd.li/i/14883160"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "局部广告",
       "enable": false,

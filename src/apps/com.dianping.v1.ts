@@ -153,22 +153,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-选择地图时自动点击[更多]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.dianping.nova.picasso.DPPicassoBoxActivity",
-          "matches": [
-            "[text=\"请选择地图\"][visibleToUser=true]",
-            "@[clickable=true] > [text^=\"更多\"][visibleToUser=true]"
-          ],
-          "exampleUrls": "https://e.gkd.li/ce751918-dab2-4670-a608-9edbcb3bdc0e",
-          "snapshotUrls": "https://i.gkd.li/i/23289239"
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "通知提示-消息页上方开启系统通知提醒",
       "enable": false,

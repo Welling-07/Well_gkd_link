@@ -61,42 +61,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-自动展开回复",
-      "desc": "点击[展开XX条回复]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.xs.fm.karaoke.impl.cover.KaraokeCoverActivity",
-          "matches": "@ViewGroup[clickable=true] > TextView[text^=\"展开\"][text$=\"条回复\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25246736",
-            "https://i.gkd.li/i/25282147"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-关联抖音账号登录弹窗",
-      "desc": "x掉",
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": "com.xs.fm.live.impl.ecom.mall.auth.DouyinAuthActivity",
-          "matches": "@ImageView[clickable=true][visibleToUser=true][width<66 && height<66] <<3 [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/25367551",
-          "fastQuery": true
-        },
-        {
-          "activityIds": "com.dragon.read.pages.main.MainFragmentActivity",
-          "matches": "[text=\"关联抖音后解锁更多功能体验\"] - ImageView[clickable=true][visibleToUser=true][width<66 && height<66]",
-          "snapshotUrls": "https://i.gkd.li/i/25367549",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "局部广告",
       "rules": [

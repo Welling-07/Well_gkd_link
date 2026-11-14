@@ -6,27 +6,6 @@ export default defineGkdApp({
   "name": "抖音",
   "groups": [
     {
-      "key": 0,
-      "name": "功能类-发现通讯录好友弹窗",
-      "desc": "点击[暂时不要]",
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "forcedTime": 10000,
-      "rules": [
-        {
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
-          "matches": "@[text=\"暂时不要\"] +2 [text=\"发现好友\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/af8632c4-f5fd-403a-aca9-daf92ec6cda1",
-          "snapshotUrls": "https://i.gkd.li/i/29722723",
-          "fastQuery": true,
-          "forcedTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 1,
       "name": "权限提示-定位权限",
       "desc": "点击[以后再说]",
@@ -60,24 +39,6 @@ export default defineGkdApp({
           "fastQuery": true,
           "actionMaximum": 1,
           "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-发现通讯录好友",
-      "desc": "点击【暂时不要】",
-      "enable": false,
-      "fastQuery": true,
-      "resetMatch": "app",
-      "actionMaximum": 1,
-      "snapshotUrls": "https://i.gkd.li/i/14467866",
-      "rules": [
-        {
-          "matches": "[text=\"发现好友\"] -2 [text=\"暂时不要\"]",
-          "fastQuery": true,
-          "resetMatch": "app",
-          "actionMaximum": 1
         }
       ]
     }

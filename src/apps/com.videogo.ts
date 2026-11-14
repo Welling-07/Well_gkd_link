@@ -156,20 +156,6 @@ export default defineGkdApp({
           "actionMaximumKey": 0
         }
       ]
-    },
-    {
-      "key": 4,
-      "name": "功能类-在线值守试用弹窗",
-      "desc": "点击x",
-      "enable": false,
-      "activityIds": "com.videogo.main.MainTabActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14065785",
-      "rules": [
-        {
-          "matches": "[text=\"了解并试用服务\"] <<n ViewGroup[index=0][childCount=2] > ViewGroup[clickable=true]",
-          "activityIds": "com.videogo.main.MainTabActivity"
-        }
-      ]
     }
   ]
 });

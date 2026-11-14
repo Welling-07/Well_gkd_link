@@ -30,27 +30,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-自动确认[退出]",
-      "desc": "退出软件时点击[退出程序]",
-      "fastQuery": true,
-      "activityIds": "com.remote.cn.MainActivity",
-      "rules": [
-        {
-          "matches": "[text=\"退出程序\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14047538",
-          "fastQuery": true,
-          "activityIds": "com.remote.cn.MainActivity"
-        },
-        {
-          "matches": "@Button[desc=\"退出程序\"] <4 View < View < View < View < FrameLayout < [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/24852663",
-          "fastQuery": true,
-          "activityIds": "com.remote.cn.MainActivity"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "通知提示-首页反诈骗提示",
       "rules": [
@@ -61,19 +40,6 @@ export default defineGkdApp({
             "https://i.gkd.li/i/24853050",
             "https://i.gkd.li/i/24995320"
           ]
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-退出软件时点击\"退出程序\"",
-      "enable": false,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.example.raylink_flutter.MainActivity",
-          "matches": "[vid=\"raylink_desktop_dialog_msg_bottombtn_left_tv\"]",
-          "snapshotUrls": "https://i.gkd.li/i/14047538"
         }
       ]
     },

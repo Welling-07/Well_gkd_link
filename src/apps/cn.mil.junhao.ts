@@ -50,32 +50,6 @@ export default defineGkdApp({
           "snapshotUrls": "https://i.gkd.li/i/13806894"
         }
       ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-首页右侧浮窗",
-      "enable": false,
-      "activityIds": "com.mediacloud.app.nav2.AppHome21Style",
-      "snapshotUrls": "https://i.gkd.li/i/13806894",
-      "rules": [
-        {
-          "matches": "[vid=\"fragment_containerx\"] > FrameLayout > ImageView[index=2][clickable=true]",
-          "activityIds": "com.mediacloud.app.nav2.AppHome21Style"
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-意见反馈浮窗",
-      "enable": false,
-      "activityIds": "com.mediacloud.app.nav2.AppHome21Style",
-      "snapshotUrls": "https://i.gkd.li/i/13806896",
-      "rules": [
-        {
-          "matches": "[vid=\"float_feedback\"] > ImageView[index=2][clickable=true]",
-          "activityIds": "com.mediacloud.app.nav2.AppHome21Style"
-        }
-      ]
     }
   ]
 });

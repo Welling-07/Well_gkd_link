@@ -63,44 +63,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-更多-保存到相册",
-      "desc": "右上角菜单-点击[保存到相册]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "org.telegram.ui.LaunchActivity",
-          "matches": "@[clickable=true][left>350] > [text=\"保存到相册\" || text=\"儲存到相簿\" || text=\"Save to Gallery\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/26645432",
-            "https://i.gkd.li/i/27050604",
-            "https://i.gkd.li/i/26645464"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/26645468",
-          "exampleUrls": "https://e.gkd.li/f164341a-32fa-4054-9ae1-85d5e686bd64"
-        }
-      ]
-    },
-    {
-      "key": 4,
-      "name": "功能类-只保存单个媒体",
-      "desc": "弹窗-点击 [这张图片]或[该媒体]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "matches": "[text^=\"保存\" || text^=\"儲存\" || text^=\"Save\"] < * +2 * > [text^=\"这\" || text^=\"這\" || text^=\"This\" || text^=\"该\"][clickable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/27050091",
-            "https://i.gkd.li/i/27050227",
-            "https://i.gkd.li/i/26645509",
-            "https://i.gkd.li/i/27049721"
-          ],
-          "exampleUrls": "https://e.gkd.li/322731e7-f595-4775-9986-a9cff001e861",
-          "activityIds": "org.telegram.ui.LaunchActivity"
-        }
-      ]
     }
   ]
 });

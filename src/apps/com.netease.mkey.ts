@@ -23,23 +23,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-一键迁移至新版将军令",
-      "enable": false,
-      "matchTime": 10000,
-      "fastQuery": true,
-      "activityIds": "com.netease.mkey.activity.NtSecActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13421302",
-      "rules": [
-        {
-          "matches": "[id=\"com.netease.mkey:id/tv_cancel\"]",
-          "matchTime": 10000,
-          "fastQuery": true,
-          "activityIds": "com.netease.mkey.activity.NtSecActivity"
-        }
-      ]
     }
   ]
 });

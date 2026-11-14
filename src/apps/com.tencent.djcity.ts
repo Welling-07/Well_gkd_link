@@ -77,43 +77,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-[签到成功]弹窗",
-      "desc": "点击[好的]",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".activities.homepage.MainActivity",
-          "matches": "@View[clickable=true] > [desc=\"好的\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/22ba335b-c225-41f0-97be-a91377ebc121",
-          "snapshotUrls": "https://i.gkd.li/i/14229554",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-\"签到成功\"弹窗",
-      "desc": "点击\"好的\"",
-      "enable": false,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": "com.tencent.djcity.activities.homepage.MainActivity",
-          "matches": "@View[clickable=true] > [desc=\"好的\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/22ba335b-c225-41f0-97be-a91377ebc121",
-          "snapshotUrls": "https://i.gkd.li/i/14229554",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
     }
   ]
 });

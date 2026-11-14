@@ -82,29 +82,6 @@ export default defineGkdApp({
           ]
         }
       ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-自动签到",
-      "desc": "自动点击签到领时长",
-      "fastQuery": true,
-      "activityIds": ".activity.MainActivity",
-      "rules": [
-        {
-          "matches": "[vid=\"sign_btn\"][text=\"签到\"][clickable=true][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/25574104",
-          "fastQuery": true,
-          "activityIds": ".activity.MainActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "[vid=\"sign_title\"] + [vid=\"sign_acquire_title\"]",
-          "action": "back",
-          "snapshotUrls": "https://i.gkd.li/i/25574182",
-          "fastQuery": true,
-          "activityIds": ".activity.MainActivity"
-        }
-      ]
     }
   ]
 });

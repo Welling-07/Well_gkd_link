@@ -125,19 +125,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-自选页面缩写提示信息",
-      "enable": false,
-      "activityIds": "com.eastmoney.android.fund.centralis.activity.FundRootActivity",
-      "snapshotUrls": "https://i.gkd.li/i/12642387",
-      "rules": [
-        {
-          "matches": "[desc=\"表示场内基金的最新价和折价率\"] -(2) FrameLayout < FrameLayout + ImageView",
-          "activityIds": "com.eastmoney.android.fund.centralis.activity.FundRootActivity"
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "评价提示",
       "enable": false,

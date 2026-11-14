@@ -54,33 +54,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-应用更新页面-点击[查看更多]",
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".service.appmgr.view.activity.AppUpdateActivity",
-          "matches": "[text=\"查看更多\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/e2283b1d-3041-49c5-aca2-7c165c83ce37",
-          "snapshotUrls": "https://i.gkd.li/i/14738587",
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "activityIds": "com.huawei.appmarket.service.appmgr.view.activity.AppUpdateActivity",
-          "matches": "[text=\"查看更多\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/e2283b1d-3041-49c5-aca2-7c165c83ce37",
-          "snapshotUrls": "https://i.gkd.li/i/14738587",
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "全屏广告-热门应用推荐弹窗",
       "desc": "点击[直接进入]",
@@ -144,52 +117,6 @@ export default defineGkdApp({
           "matches": "[text=\"以后再说\"][visibleToUser=true]",
           "exampleUrls": "https://e.gkd.li/1a0531ef-a18c-483d-8ac9-b50c96c6431d",
           "snapshotUrls": "https://i.gkd.li/i/18328929"
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-自动安装应用",
-      "fastQuery": true,
-      "activityIds": "com.huawei.appgallery.systeminstalldistservice.riskcheck.ui.activity.InstallDistActivity",
-      "rules": [
-        {
-          "matches": "[vid=\"hidden_card_checkbox\"][checked=false][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/2de4eb7c-964e-4b24-ab5f-1460c7993a0b",
-          "snapshotUrls": "https://i.gkd.li/i/18492709",
-          "fastQuery": true,
-          "activityIds": "com.huawei.appgallery.systeminstalldistservice.riskcheck.ui.activity.InstallDistActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "[text=\"继续安装\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/6b79c349-8071-4598-a337-20a2f02df2f7",
-          "snapshotUrls": "https://i.gkd.li/i/18492712",
-          "fastQuery": true,
-          "activityIds": "com.huawei.appgallery.systeminstalldistservice.riskcheck.ui.activity.InstallDistActivity"
-        },
-        {
-          "preKeys": 1,
-          "matches": "[text=\"完成\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/445fc7d4-8ee3-4f29-a79b-cd4c0d4fd11f",
-          "snapshotUrls": "https://i.gkd.li/i/18492760",
-          "fastQuery": true,
-          "activityIds": "com.huawei.appgallery.systeminstalldistservice.riskcheck.ui.activity.InstallDistActivity"
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-关闭自动更新提示",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".service.appmgr.view.activity.AppUpdateActivity",
-          "matches": [
-            "[text=\"WLAN 闲时自动更新\"]",
-            "[text=\"不用了\"][clickable=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/25933091"
         }
       ]
     },

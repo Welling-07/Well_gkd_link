@@ -372,27 +372,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-长按图片后[保存]",
-      "desc": "点击[保存]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": [
-            ".group.activity.GroupTopicActivity",
-            ".baseproject.image.ImageActivity"
-          ],
-          "matches": "[text=\"保存\" || text=\"保存图片到相册\"][clickable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/31184441",
-            "https://i.gkd.li/i/31184665",
-            "https://i.gkd.li/i/31184797"
-          ],
-          "exampleUrls": "https://e.gkd.li/f6c2dab4-e87e-4ae5-a778-b97d6cc2b760"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "局部广告-卡片广告",
       "desc": "点击关闭",
@@ -541,40 +520,6 @@ export default defineGkdApp({
           ],
           "exampleUrls": "https://e.gkd.li/8067419c-a902-4750-9e1e-655bfc5c7342",
           "snapshotUrls": "https://i.gkd.li/i/18717798"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-不分享/同步作品短评",
-      "desc": "书影音-作品-状态-不分享/同步短评(5s后可手动)",
-      "enable": false,
-      "fastQuery": true,
-      "matchTime": 5000,
-      "resetMatch": "activity",
-      "activityIds": "com.douban.frodo.subject.activity.RatingActivity",
-      "rules": [
-        {
-          "name": "不分享到微信、微博",
-          "matches": "@LinearLayout > [id=\"com.douban.frodo:id/check_weibo_wechat\"][visibleToUser=true][checked=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/12508777"
-          ],
-          "fastQuery": true,
-          "matchTime": 5000,
-          "resetMatch": "activity",
-          "activityIds": "com.douban.frodo.subject.activity.RatingActivity"
-        },
-        {
-          "name": "不同步到动态",
-          "matches": "@LinearLayout > [id=\"com.douban.frodo:id/check_status\"][visibleToUser=true][checked=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/12508777"
-          ],
-          "fastQuery": true,
-          "matchTime": 5000,
-          "resetMatch": "activity",
-          "activityIds": "com.douban.frodo.subject.activity.RatingActivity"
         }
       ]
     },

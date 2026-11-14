@@ -34,69 +34,6 @@ export default defineGkdApp({
           "fastQuery": true
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-快速添加按需药物",
-      "desc": "添加一次性条目-> 按需要(第一个添加的药品)->调整剂量",
-      "fastQuery": true,
-      "resetMatch": "app",
-      "activityIds": ".feature.mainactivity.MainActivity",
-      "rules": [
-        {
-          "name": "添加一次性条目",
-          "matches": "[id=\"logOneTimeEntry\"][visibleToUser=true] < @[clickable=true] < View <4 ScrollView < * <2 * <2 View <<2 [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/26223457",
-          "exampleUrls": "https://e.gkd.li/6cef22b5-89f0-4a39-ab01-4df740d1556b",
-          "fastQuery": true,
-          "resetMatch": "app",
-          "activityIds": ".feature.mainactivity.MainActivity"
-        },
-        {
-          "name": "按需要(第一个)",
-          "matchRoot": true,
-          "matches": "TextView < @View[index=parent.childCount.minus(1)][childCount=1][clickable=true] <n ScrollView <<2 * <2 View <<2 [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/26223492",
-          "exampleUrls": "https://e.gkd.li/a1fa2f0b-a011-42bc-b6f4-d520007cf036",
-          "fastQuery": true,
-          "resetMatch": "app",
-          "activityIds": ".feature.mainactivity.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-自动点击剂量调整",
-      "desc": "药物界面-> 点击剂量-> 用户输入",
-      "fastQuery": true,
-      "resetMatch": "match",
-      "activityIds": ".feature.resolve.presentation.resolve.spontaneous.SpontaneousResolveActivity",
-      "rules": [
-        {
-          "matches": "@[id=\"dosePicker\"][clickable=true][visibleToUser=true] < View <5 ScrollView <<4 [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/28907834",
-          "exampleUrls": "https://e.gkd.li/3c6324c0-6c32-4bad-b6f9-4fb5d9dc9132",
-          "fastQuery": true,
-          "resetMatch": "match",
-          "activityIds": ".feature.resolve.presentation.resolve.spontaneous.SpontaneousResolveActivity"
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-库存低3s自动编辑",
-      "desc": "不编辑一般都点确定,编辑你得看一眼剩多少药再编辑",
-      "actionDelay": 3000,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".multiplatform.feature.inventory.presentation.InventoryLowDialogActivity",
-          "matches": "[text=\"编辑库存\"] < @[id=\"confirmButton\"][clickable=true] -3 [text=\"库存低\"] < [id=\"dialogBody\"] <<4 [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/28907622",
-          "exampleUrls": "https://e.gkd.li/0e4c3f4c-37ec-4592-b980-578cdef868c3",
-          "actionDelay": 3000
-        }
-      ]
     }
   ]
 });

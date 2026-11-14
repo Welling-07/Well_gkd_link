@@ -33,19 +33,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-开启[自动抵扣]开关",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".ui.activity.scan.AfterPayUseAct",
-          "matches": "@[vid=\"switchView\"][checked=false] - [vid=\"tv_automatic_use\"]",
-          "exampleUrls": "https://e.gkd.li/85bbfba2-5011-4f48-a08a-45386836ebd6",
-          "snapshotUrls": "https://i.gkd.li/i/17260785"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "全屏广告-弹窗广告",
       "desc": "点击关闭",
@@ -143,23 +130,6 @@ export default defineGkdApp({
           "actionMaximumKey": 0,
           "priorityTime": 10000,
           "activityIds": "com.qiekj.user.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 4,
-      "name": "功能类-支付自动抵扣",
-      "desc": "点击【自动抵扣】开关",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": ".ui.activity.scan.AfterPayUseAct",
-      "rules": [
-        {
-          "matches": "[vid=\"tv_automatic_use\"] + [vid=\"switchView\"][checked=false]",
-          "exampleUrls": "https://e.gkd.li/23e3fc7e-1668-448d-824e-3e7238b18972",
-          "snapshotUrls": "https://i.gkd.li/i/17260785",
-          "fastQuery": true,
-          "activityIds": ".ui.activity.scan.AfterPayUseAct"
         }
       ]
     }

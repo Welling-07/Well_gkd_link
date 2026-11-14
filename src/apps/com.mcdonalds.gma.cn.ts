@@ -63,19 +63,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-关闭[开通免密支付]弹窗",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.mcd.order.activity.OrderDetailActivity",
-          "matches": "@[vid=\"iv_close\"] - * >2 [text*=\"免密支付\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/4b26dc9e-06d9-43a2-a105-6fb711c9aedb",
-          "snapshotUrls": "https://i.gkd.li/i/14798873"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "权限提示-设备信息权限",
       "desc": "点击[不允许]",

@@ -309,45 +309,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-自动观看广告视频",
-      "desc": "自动观看广告并等待30s后关闭",
-      "fastQuery": true,
-      "rules": [
-        {
-          "name": "点击\"看视频\"",
-          "activityIds": ".activity.MainActivity",
-          "matches": "[id=\"com.bytedance.novel.api:id/component_ad_dialog_button_video\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13402468",
-          "fastQuery": true
-        },
-        {
-          "preKeys": 0,
-          "name": "等待30s点击\"关闭\"",
-          "actionDelay": 30000,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity",
-          "matches": "UIText[text=\"广告\"] +n UIText[text=\"关闭\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13402480",
-          "fastQuery": true
-        },
-        {
-          "name": "点击\"看视频\" (2)",
-          "activityIds": "com.ss.android.article.news.activity.MainActivity",
-          "matches": "[id=\"com.bytedance.novel.api:id/component_ad_dialog_button_video\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13402468",
-          "fastQuery": true
-        },
-        {
-          "name": "等待30s点击\"关闭\" (2)",
-          "actionDelay": 30000,
-          "activityIds": "com.ss.android.excitingvideo.ExcitingVideoActivity",
-          "matches": "UIText[text=\"广告\"] +n UIText[text=\"关闭\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13402480",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "局部广告-底部热榜弹窗",
       "desc": "点击X",
@@ -370,54 +331,6 @@ export default defineGkdApp({
           "matches": "@FlattenUIImage[clickable=true] <n FrameLayout <<2 FrameLayout - LinearLayout [text=\"首页\"]",
           "snapshotUrls": "https://i.gkd.li/i/13828331",
           "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-[关联抖音账号]弹窗",
-      "desc": "点击关闭",
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".activity.MainActivity",
-          "matches": "@[desc=\"关闭\"] + [text^=\"关联\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/c938001e-f39b-4ece-ad0e-2c93ba41aa94",
-          "snapshotUrls": "https://i.gkd.li/i/14717889",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.ss.android.article.news.activity.MainActivity",
-          "matches": "@[desc=\"关闭\"] + [text^=\"关联\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/c938001e-f39b-4ece-ad0e-2c93ba41aa94",
-          "snapshotUrls": "https://i.gkd.li/i/14717889",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 9,
-      "name": "功能类-[下次打开APP默认进入xx频道]弹窗",
-      "desc": "点击[取消]",
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".activity.MainActivity",
-          "matches": [
-            "[text^=\"下次打开APP默认进入\"]",
-            "[text=\"取消\"][clickable=true]"
-          ],
-          "exampleUrls": "https://m.gkd.li/57941037/6166519d-d38d-49c0-b54b-72c25670aa24",
-          "snapshotUrls": "https://i.gkd.li/i/15102876",
-          "actionMaximum": 1,
-          "resetMatch": "app"
         }
       ]
     },
@@ -453,25 +366,6 @@ export default defineGkdApp({
           "matches": "[id=\"android:id/content\"] > FrameLayout[childCount=3] > ImageView[clickable=true][visibleToUser=true][index=2]",
           "exampleUrls": "https://m.gkd.li/57941037/096c3d85-08b0-4566-865d-31eb0079ad6e",
           "snapshotUrls": "https://i.gkd.li/i/15314921"
-        }
-      ]
-    },
-    {
-      "key": 11,
-      "name": "功能类-[下次打开APP默认进入发现频道]弹窗",
-      "desc": "点击取消",
-      "enable": false,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.ss.android.article.news.activity.MainActivity",
-          "matches": "[text^=\"下次打开APP默认进入\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/6166519d-d38d-49c0-b54b-72c25670aa24",
-          "snapshotUrls": "https://i.gkd.li/i/15102876",
-          "actionMaximum": 1,
-          "resetMatch": "app"
         }
       ]
     },

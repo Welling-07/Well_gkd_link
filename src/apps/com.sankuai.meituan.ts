@@ -390,59 +390,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 9,
-      "name": "功能类-付款后自动点击完成",
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": "com.sankuai.waimai.platform.machpro.container.WMMPActivity",
-          "matches": "@[text=\"完成\"] -n ViewGroup >(1,7) [text=\"商家已接单\" || text=\"等待商家接单\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14163717",
-            "https://i.gkd.li/i/17158063"
-          ],
-          "fastQuery": true
-        },
-        {
-          "action": "clickCenter",
-          "activityIds": "com.meituan.android.hybridcashier.HybridCashierActivity",
-          "matches": "[text=\"支付成功\"] >(5,7) @[visibleToUser=true][text=\"完成\"] <<n [vid=\"mil_container\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14392284",
-            "https://i.gkd.li/i/26628762"
-          ],
-          "fastQuery": true
-        },
-        {
-          "activityIds": "com.sankuai.waimai.platform.machpro.container.WMMPActivity",
-          "matches": [
-            "[text=\"商家已接单\" || text=\"等待商家接单\"][visibleToUser=true]",
-            "[text=\"完成\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14163717",
-            "https://i.gkd.li/i/17158063"
-          ],
-          "fastQuery": true
-        },
-        {
-          "activityIds": "com.meituan.android.hybridcashier.HybridCashierActivity",
-          "matches": "[text=\"支付成功\"] >5 @[clickable=true][text=\"完成\"] <<n [vid=\"mil_container\"]",
-          "snapshotUrls": "https://i.gkd.li/i/14392284",
-          "fastQuery": true
-        },
-        {
-          "activityIds": "com.sankuai.waimai.platform.machpro.container.WMMPActivity",
-          "matches": [
-            "[text=\"商家已接单\"][visibleToUser=true]",
-            "[text=\"完成\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/14163717",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 10,
       "name": "局部广告-直播讲解悬浮窗",
       "desc": "点击关闭",

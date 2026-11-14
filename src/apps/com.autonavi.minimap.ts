@@ -83,25 +83,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-截屏分享",
-      "desc": "关闭截屏时app弹出的分享弹窗",
-      "activityIds": "com.autonavi.map.activity.NewMapActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13473388",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.autonavi.map.activity.NewMapActivity",
-          "matches": "[text=\"分享截图至\"] < ViewGroup < ViewGroup + @ViewGroup[clickable=true] > ImageView <<n [vid=\"fragment_container\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13473388"
-        },
-        {
-          "matches": "[text=\"分享截图至\"] < ViewGroup < ViewGroup + @ViewGroup[clickable=true] > ImageView",
-          "activityIds": "com.autonavi.map.activity.NewMapActivity"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "局部广告-首页上方消息提醒",
       "activityIds": "com.autonavi.map.activity.NewMapActivity",
@@ -237,20 +218,6 @@ export default defineGkdApp({
           "matches": "@ViewGroup[clickable=true] > View[visibleToUser=true][text^=\"关闭\"] <<n [vid=\"mapInteractiveRelativeLayout\"]",
           "exampleUrls": "https://e.gkd.li/0a4e847f-b1b0-4667-982a-43f313305139",
           "snapshotUrls": "https://i.gkd.li/i/22287641"
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-一键点亮角落",
-      "desc": "点击[一键点亮]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.autonavi.map.activity.NewMapActivity",
-          "matches": "[text=\"一键点亮\"] <2 @[clickable=true] <<n [vid=\"mapInteractiveRelativeLayout\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/1fd33208-e81d-4da6-a23c-4d562a8e0ae0",
-          "snapshotUrls": "https://i.gkd.li/i/14881505"
         }
       ]
     },

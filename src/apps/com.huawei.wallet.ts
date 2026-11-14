@@ -72,19 +72,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-支付成功后点击关闭",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.huawei.nfc.carrera.ui.swipe.SwipeResultActivity",
-          "matches": "[vid=\"btn_completed\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/984fd805-ad50-4ffc-adce-fffe42109e98",
-          "snapshotUrls": "https://i.gkd.li/i/18146717"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "权限提示-NFC权限",
       "desc": "点击取消",

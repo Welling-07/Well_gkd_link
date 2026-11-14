@@ -18,25 +18,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-[取消]转发给AI",
-      "desc": "长按句子后出现的弹窗, 点击[取消]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": [
-            ".sentence.AXPostDetailActivity",
-            ".main.MainActivity"
-          ],
-          "matches": "@[text=\"取消\"][clickable=true] -n [text^=\"转发给AI伙伴\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/28225915",
-            "https://i.gkd.li/i/28226297"
-          ]
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "分段广告",
       "desc": "①点击x掉 ②点击[不感兴趣] ③点击[我知道了]",

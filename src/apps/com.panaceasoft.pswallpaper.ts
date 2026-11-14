@@ -48,25 +48,6 @@ export default defineGkdApp({
           "activityIds": ".xiao.MainActivity"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-公告弹窗",
-      "enable": false,
-      "fastQuery": true,
-      "matchTime": 10000,
-      "resetMatch": "app",
-      "actionMaximum": 1,
-      "snapshotUrls": "https://i.gkd.li/i/14141561",
-      "rules": [
-        {
-          "matches": "[vid=\"tv_next\"][text=\"下一条\"] <<n LinearLayout - [vid=\"iv_close\"]",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "resetMatch": "app",
-          "actionMaximum": 1
-        }
-      ]
     }
   ]
 });

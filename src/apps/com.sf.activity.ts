@@ -131,19 +131,6 @@ export default defineGkdApp({
           "priorityTime": 10000
         }
       ]
-    },
-    {
-      "key": 4,
-      "name": "功能类-专属月报弹窗",
-      "enable": false,
-      "rules": [
-        {
-          "activityIds": "com.sf.activity.MainActivity",
-          "matches": "[id=\"MonthReportDialogCloseBtn\"] > ImageView",
-          "exampleUrls": "https://m.gkd.li/57941037/83023ed5-f143-4355-9fff-e078011dfa4a",
-          "snapshotUrls": "https://i.gkd.li/i/12642441"
-        }
-      ]
     }
   ]
 });

@@ -53,30 +53,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-[关闭]保存成功弹窗",
-      "desc": "点击x掉",
-      "rules": [
-        {
-          "fastQuery": true,
-          "forcedTime": 1800000,
-          "activityIds": [
-            ".MainActivity",
-            ".program.devicetools.appmanager.AppManagerActivity",
-            ".program.imageutils."
-          ],
-          "matches": "[getChild(0).text*=\"保存成功\"] + [vid=\"dialog_close_view\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/32636850",
-            "https://i.gkd.li/i/32635902",
-            "https://i.gkd.li/i/32636933",
-            "https://i.gkd.li/i/32636972"
-          ],
-          "exampleUrls": "https://e.gkd.li/5c650324-bf22-4d9f-9fe0-2c0b738040c4"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "更新提示",
       "actionMaximum": 1,

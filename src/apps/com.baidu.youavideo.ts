@@ -363,22 +363,6 @@ export default defineGkdApp({
           "fastQuery": true
         }
       ]
-    },
-    {
-      "key": 11,
-      "name": "功能类-展示精选回忆故事",
-      "desc": "点击x",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.baidu.youavideo.story.ui.view.activity.CloudStorySetActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14138907",
-      "rules": [
-        {
-          "matches": "[text=\"在桌面展示精选回忆故事\"] - [vid=\"iv_close\"]",
-          "fastQuery": true,
-          "activityIds": "com.baidu.youavideo.story.ui.view.activity.CloudStorySetActivity"
-        }
-      ]
     }
   ]
 });

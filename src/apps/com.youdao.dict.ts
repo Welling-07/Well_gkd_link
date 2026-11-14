@@ -263,29 +263,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-点击显示释义",
-      "activityIds": "_flutter_android_bridge.WordBookFlutterActivity",
-      "snapshotUrls": [
-        "https://i.gkd.li/i/14292588",
-        "https://i.gkd.li/i/14292587"
-      ],
-      "rules": [
-        {
-          "matches": "[desc=\"点击显示释义\"] > View[index=3][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14292588",
-            "https://i.gkd.li/i/14292587"
-          ],
-          "activityIds": "_flutter_android_bridge.WordBookFlutterActivity"
-        },
-        {
-          "matches": "[desc=\"点击显示释义\"] > View[index=3][visibleToUser=true]",
-          "activityIds": "com.youdao.dict_flutter_android_bridge.WordBookFlutterActivity"
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "局部广告",
       "desc": "点击关闭",
@@ -310,47 +287,6 @@ export default defineGkdApp({
           ],
           "excludeSnapshotUrls": "https://i.gkd.li/i/14468628",
           "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-关闭单词页面[去复习]提示",
-      "desc": "通过点击提示框以外的其他地方关闭",
-      "rules": [
-        {
-          "fastQuery": true,
-          "position": {
-            "left": "width * 0.7231",
-            "top": "width * -1.0673"
-          },
-          "activityIds": [
-            ".activity.DictQueryActivity",
-            ".activity.MainActivity"
-          ],
-          "matches": "[text=\"已收藏单词一周，快去复习吧\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/ab107cc2-98e1-44a2-a15a-0ee0d4925255",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14524540",
-            "https://i.gkd.li/i/14524817"
-          ]
-        },
-        {
-          "fastQuery": true,
-          "position": {
-            "left": "width * 0.7231",
-            "top": "width * -1.0673"
-          },
-          "activityIds": [
-            "com.youdao.dict.activity.DictQueryActivity",
-            "com.youdao.dict.activity.MainActivity"
-          ],
-          "matches": "[text=\"已收藏单词一周，快去复习吧\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/ab107cc2-98e1-44a2-a15a-0ee0d4925255",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14524540",
-            "https://i.gkd.li/i/14524817"
-          ]
         }
       ]
     },

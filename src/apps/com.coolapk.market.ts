@@ -470,47 +470,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-自动保存原图",
-      "desc": "长按图片->点击[保存原图]",
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": [
-            ".view.photo.PhotoViewActivity",
-            ".view.wallpaper.coolpic.CoolPicDetailActivity"
-          ],
-          "matches": "@[clickable=true] > [text=\"保存原图\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25621281",
-            "https://i.gkd.li/i/25621360"
-          ],
-          "exampleUrls": "https://e.gkd.li/d62f40f9-51ca-4059-9217-6d93e080db8b",
-          "fastQuery": true
-        },
-        {
-          "activityIds": ".view.photo.PhotoViewV16Activity",
-          "matches": "[text=\"保存原图\"] < @[clickable=true] <n View[childCount>2] < View < View < View < ViewGroup < [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/28377623",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-消息已读自动[确定]",
-      "desc": "点击[确定]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".view.notification.v18.NotificationV18Activity",
-          "matches": "[text=\"确定\"] < @[clickable=true] <6 View[getChild(0).text$=\"已读\"] < View < ComposeView < [id=\"android:id/content\"]",
-          "snapshotUrls": "https://i.gkd.li/i/30532352",
-          "exampleUrls": "https://e.gkd.li/dbf91283-a342-416e-a009-5b7e67301c77"
-        }
-      ]
-    },
-    {
       "key": 8,
       "name": "分段广告-卡片广告",
       "desc": "点击卡片右上角按钮->免广告-点击关闭->选择关闭原因-点击不感兴趣",
@@ -598,22 +557,6 @@ export default defineGkdApp({
           "matches": "[text=\"去开启\"] - [text=\"以后再说\"]",
           "fastQuery": true,
           "activityIds": "com.coolapk.market.view.main.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 10,
-      "name": "功能类-自动查看原图",
-      "desc": "查看图片时自动点击原图",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.coolapk.market.view.photo.PhotoViewActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14913023",
-      "rules": [
-        {
-          "matches": "[vid=\"load_source_button\"][checked=false]",
-          "fastQuery": true,
-          "activityIds": "com.coolapk.market.view.photo.PhotoViewActivity"
         }
       ]
     }

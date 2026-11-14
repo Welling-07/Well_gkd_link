@@ -124,27 +124,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-看广告视频领VIP",
-      "desc": "等待15s自动点击\"退出\"",
-      "rules": [
-        {
-          "actionDelay": 15000,
-          "fastQuery": true,
-          "activityIds": "com.tencentmusic.ad.tmead.reward.TMERewardActivity",
-          "matches": "[vid=\"tme_ad_skip_button\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13610667"
-        },
-        {
-          "actionDelay": 15000,
-          "fastQuery": true,
-          "activityIds": "com.tencentmusic.ad.tmead.reward.TMERewardActivity",
-          "matches": "[id=\"com.miui.player:id/tme_ad_skip_button\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13610667"
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "局部广告-主界面卡片广告",
       "rules": [
@@ -242,24 +221,6 @@ export default defineGkdApp({
       "rules": [
         {
           "matches": "[id=\"com.miui.player:id/cl_floating_promote\"] > [id=\"com.miui.player:id/iv_close\"]",
-          "activityIds": "com.tencent.qqmusiclite.activity.MainActivity",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 12,
-      "name": "功能类-年度报告邀请函弹窗",
-      "desc": "点击关闭",
-      "enable": false,
-      "activityIds": "com.tencent.qqmusiclite.activity.MainActivity",
-      "fastQuery": true,
-      "snapshotUrls": [
-        "https://i.gkd.li/i/13623503"
-      ],
-      "rules": [
-        {
-          "matches": "[id=\"com.miui.player:id/iv_close_dialog_button\"]",
           "activityIds": "com.tencent.qqmusiclite.activity.MainActivity",
           "fastQuery": true
         }

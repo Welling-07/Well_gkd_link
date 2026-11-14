@@ -73,26 +73,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-未登录时自动点击登录",
-      "desc": "仅限老年版和英文版可用",
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".activity.main.MainActivity",
-          "matches": "[vid=\"rl_remit_login_button_background\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/23227516",
-            "https://i.gkd.li/i/23227551"
-          ],
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "权限提示-通知权限",
       "rules": [
@@ -104,18 +84,6 @@ export default defineGkdApp({
             "[vid=\"close_iv\"][clickable=true]"
           ],
           "snapshotUrls": "https://i.gkd.li/i/25356505"
-        }
-      ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-第一次启动提示",
-      "enable": false,
-      "activityIds": "com.icbc.activity.init.SplashActivity",
-      "rules": [
-        {
-          "matches": "[id=\"com.icbc:id/close_btn\"]",
-          "activityIds": "com.icbc.activity.init.SplashActivity"
         }
       ]
     }

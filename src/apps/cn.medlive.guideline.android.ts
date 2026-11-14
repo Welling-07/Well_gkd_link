@@ -23,53 +23,6 @@ export default defineGkdApp({
           "snapshotUrls": "https://i.gkd.li/i/25769624"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-签到自动退出",
-      "fastQuery": true,
-      "activityIds": "cn.medlive.guideline.activity.GuidelineTaskCenterActivity",
-      "rules": [
-        {
-          "matches": "ViewGroup[childCount=2] > [vid=\"clDialog\"] + [vid=\"ivClose\"][clickable=true][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/6f3a356e-cca2-4526-be9c-ed8bf4113ea7",
-          "snapshotUrls": "https://i.gkd.li/i/25769782",
-          "fastQuery": true,
-          "activityIds": "cn.medlive.guideline.activity.GuidelineTaskCenterActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "[vid=\"included_layout_title\"] > @ImageButton[clickable=true][visibleToUser=true] + [vid=\"app_header_title\"]",
-          "exampleUrls": "https://e.gkd.li/bcc9072e-a4f1-4509-b667-9aab569742cf",
-          "snapshotUrls": "https://i.gkd.li/i/25769880",
-          "fastQuery": true,
-          "activityIds": "cn.medlive.guideline.activity.GuidelineTaskCenterActivity"
-        }
-      ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-说明书自动翻译",
-      "desc": "药品说明书-点击右下角翻译按钮",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "cn.medlive.drug.ui.DrugDetailActivity",
-          "matches": "[vid=\"llBottom\"] > [vid=\"tvTranslate\"][clickable=true][visibleToUser=true]",
-          "exampleUrls": [
-            "https://e.gkd.li/06c6e7b8-edc7-43ea-a626-9bcb8c80c11a",
-            "https://e.gkd.li/7855c4ce-eae0-4152-a2f0-ecd2ab4f2904"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25770071",
-            "https://i.gkd.li/i/25770005"
-          ],
-          "matchTime": 10000,
-          "actionMaximum": 1
-        }
-      ]
     }
   ]
 });

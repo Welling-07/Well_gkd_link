@@ -118,20 +118,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-[上新【专辑】功能]弹窗",
-      "desc": "点击关闭",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.baidu.netdisk.filealbum.ui.activity.FileAlbumListActivity",
-          "matches": "[vid=\"add_widget_dialog_close\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/256b5cad-a5ad-48e3-ba72-9c84447f2cac",
-          "snapshotUrls": "https://i.gkd.li/i/14893285"
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "开屏广告",
       "order": -10,

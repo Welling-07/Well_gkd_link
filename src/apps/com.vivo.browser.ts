@@ -6,23 +6,6 @@ export default defineGkdApp({
   "name": "vivo浏览器",
   "groups": [
     {
-      "key": 0,
-      "name": "功能类-免流提示",
-      "activityIds": "com.vivo.browser.pendant.PendantActivity",
-      "snapshotUrls": "https://i.gkd.li/i/12847431",
-      "rules": [
-        {
-          "activityIds": ".pendant.PendantActivity",
-          "matches": "[vid=\"dialog_button_right\"][text=\"继续浏览\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12847431"
-        },
-        {
-          "matches": "[id=\"com.vivo.browser:id/dialog_button_right\"][text=\"继续浏览\"]",
-          "activityIds": "com.vivo.browser.pendant.PendantActivity"
-        }
-      ]
-    },
-    {
       "key": 1,
       "name": "局部广告-天气详情页面",
       "rules": [

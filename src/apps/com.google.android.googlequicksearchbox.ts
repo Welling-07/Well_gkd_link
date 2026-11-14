@@ -42,31 +42,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-Gemini-对话连接中断重试",
-      "desc": "Gemini对话连接中断自动重试",
-      "activityIds": "com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity",
-      "fastQuery": true,
-      "rules": [
-        {
-          "name": "对话页",
-          "matches": "[vid=\"assistant_robin_main_activity\"] + FrameLayout > LinearLayout[childCount=2] > [vid=\"snackbar_action\"][clickable=true][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/3d633f7c-e3df-45dd-995f-b72b218922cd",
-          "snapshotUrls": "https://i.gkd.li/i/26026659",
-          "activityIds": "com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity",
-          "fastQuery": true
-        },
-        {
-          "name": "对话历史页",
-          "matches": "@[text=\"重试\"][clickable=true] - [text=\"无法连接\"][visibleToUser=true] < View[childCount=2] <n View + View[clickable=true] >(6-n) [vid=\"og_selected_account_disc_apd\"]",
-          "exampleUrls": "https://e.gkd.li/99430190-2af2-4b43-a648-7bacea509dd7",
-          "snapshotUrls": "https://i.gkd.li/i/29405274",
-          "activityIds": "com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "局部广告-Gemini-个性化Tip",
       "desc": "试用新功能举例对话(浪费Token)",

@@ -88,43 +88,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-忽略升级",
-      "desc": "应用升级界面-自动点击忽略",
-      "fastQuery": true,
-      "activityIds": ".ui.UpdateListActivity",
-      "rules": [
-        {
-          "excludeMatches": "[text=\"忽略本次\"][visibleToUser=true]",
-          "matches": "[vid=\"expand_button\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14931577",
-          "fastQuery": true,
-          "activityIds": ".ui.UpdateListActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "[text=\"忽略本次\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14931578",
-          "fastQuery": true,
-          "activityIds": ".ui.UpdateListActivity"
-        },
-        {
-          "excludeMatches": "[text=\"忽略本次\"][visibleToUser=true]",
-          "matches": "[vid=\"expand_button\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14931577",
-          "fastQuery": true,
-          "activityIds": "com.xiaomi.market.ui.UpdateListActivity"
-        },
-        {
-          "preKeys": 2,
-          "matches": "[text=\"忽略本次\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14931578",
-          "fastQuery": true,
-          "activityIds": "com.xiaomi.market.ui.UpdateListActivity"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "权限提示-通知权限",
       "desc": "自动点击关闭按钮",
@@ -209,92 +172,6 @@ export default defineGkdApp({
           "actionMaximum": 1,
           "resetMatch": "app",
           "activityIds": "com.xiaomi.market.business_ui.main.MarketTabActivity"
-        }
-      ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-自动点击[查看全部升级]",
-      "desc": "应用升级页面",
-      "actionMaximum": 1,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": [
-            ".ui.UpdateListActivity",
-            ".ui.UpdateAppsActivity"
-          ],
-          "matches": "@[clickable=true] > [text^=\"查看全部升级\" || text^=\"查看全部更新\"]",
-          "exampleUrls": [
-            "https://m.gkd.li/57941037/8549db1e-17a5-44e3-b657-1d2d712efd2a",
-            "https://e.gkd.li/e1a4d832-e582-4185-b93e-08ca41f46d92"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14782814",
-            "https://i.gkd.li/i/24461973"
-          ],
-          "actionMaximum": 1
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.xiaomi.market.ui.UpdateListActivity",
-          "matches": "@[clickable=true] > [text^=\"查看全部升级\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/8549db1e-17a5-44e3-b657-1d2d712efd2a",
-          "snapshotUrls": "https://i.gkd.li/i/14782814",
-          "actionMaximum": 1
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-移动数据更新弹窗点击继续",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".ui.UpdateListActivity",
-          "matches": "@[text=\"继续\"] <n * - * >4 [text^=\"您在使用数据网络，升级应用可能产生流量费用\"]",
-          "snapshotUrls": "https://i.gkd.li/i/22927652"
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-[安装新版本需要关闭应用商店]弹窗",
-      "desc": "点击[现在安装]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".ui.TranslucentActivityInner",
-          "matches": [
-            "[text^=\"安装新版本需要关闭应用商店\"]",
-            "[text=\"现在安装\"][clickable=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/25607662"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-启动后自动打开更新页面",
-      "desc": "仅开屏触发一次",
-      "fastQuery": true,
-      "activityIds": ".business_ui.main.MarketTabActivity",
-      "rules": [
-        {
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "matches": "@[clickable=true] > [text=\"我的\"] <<n [vid=\"tab_container_layout\"]",
-          "snapshotUrls": "https://i.gkd.li/i/26096077",
-          "fastQuery": true,
-          "activityIds": ".business_ui.main.MarketTabActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "@[clickable=true] >2 [text=\"应用升级\"]",
-          "snapshotUrls": "https://i.gkd.li/i/26096406",
-          "fastQuery": true,
-          "activityIds": ".business_ui.main.MarketTabActivity"
         }
       ]
     }

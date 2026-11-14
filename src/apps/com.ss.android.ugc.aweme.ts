@@ -141,19 +141,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-自动[查看原图]",
-      "desc": "聊天查看图片时,点击[查看原图]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".detail.ui.DetailActivity",
-          "matches": "[text^=\"查看原图\"][clickable=true][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/31837818"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "权限提示-通知权限",
       "desc": "点击[暂不]/[以后再说]/[禁止]/[保持现状]",
@@ -202,56 +189,6 @@ export default defineGkdApp({
           "resetMatch": "app",
           "fastQuery": true,
           "activityIds": "com.ss.android.ugc.aweme.main.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 5,
-      "name": "功能类-自动勾选原图",
-      "desc": "聊天发送图片时自动勾选原图",
-      "fastQuery": true,
-      "activityIds": "com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity",
-      "snapshotUrls": [
-        "https://i.gkd.li/i/12846036",
-        "https://i.gkd.li/i/12846040"
-      ],
-      "actionMaximum": 1,
-      "resetMatch": "match",
-      "rules": [
-        {
-          "activityIds": ".ecommerce.im.choosemedia.ECommerceIMMediaChooseActivity",
-          "matches": "@ImageView[clickable=true] + [text=\"原图\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/18637952",
-            "https://i.gkd.li/i/18637948"
-          ],
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "resetMatch": "match"
-        },
-        {
-          "activityIds": [
-            ".im.business.mediaselectpage.edit.IMEditPreviewActivity",
-            ".im.business.mediaselectpage.choose.MediaChooseActivity",
-            ".main.MainActivity"
-          ],
-          "matches": "@[clickable=true] > [text=\"原图\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25401995",
-            "https://i.gkd.li/i/25401998",
-            "https://i.gkd.li/i/25402432",
-            "https://i.gkd.li/i/31837568"
-          ],
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "resetMatch": "match"
-        },
-        {
-          "matches": "[text=\"原图\"][desc=\"未选中/复选框 原图\"]",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity",
-          "actionMaximum": 1,
-          "resetMatch": "match"
         }
       ]
     },
@@ -539,187 +476,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 15,
-      "name": "功能类-刷到推广视频时[上滑]",
-      "desc": "广告/应用/购物/咨询/服务/预约/子薇剧场 等推广视频",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionCd": 1200,
-          "actionDelay": 200,
-          "swipeArg": {
-            "start": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.6"
-            },
-            "end": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.3"
-            },
-            "duration": 200
-          },
-          "activityIds": ".main.MainActivity",
-          "matches": "([visibleToUser=true] > [text$=\"广告\" || text$=\"（推广）\"][vid=\"desc\" || desc=\"广告\"]) || ([text=\"应用\" || text=\"购物\" || text=\"咨询\" || text=\"服务\" || text=\"预约\" || text=\"子薇剧场\"][text.length<6][index=1][visibleToUser=true]) || (ViewGroup[childCount=5] > ImageView +3 [text^=\"已售\" || text^=\" 已售\"] - TextView - [text=\"讲解中 丨 \"][index=1][visibleToUser=true])",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/21142063",
-            "https://i.gkd.li/i/29403811",
-            "https://i.gkd.li/i/29403704",
-            "https://i.gkd.li/i/29403301",
-            "https://i.gkd.li/i/21142589",
-            "https://i.gkd.li/i/21142249",
-            "https://i.gkd.li/i/25355868",
-            "https://i.gkd.li/i/29403479",
-            "https://i.gkd.li/i/21765934",
-            "https://i.gkd.li/i/21523849",
-            "https://i.gkd.li/i/29605884",
-            "https://i.gkd.li/i/29605791",
-            "https://i.gkd.li/i/29605901",
-            "https://i.gkd.li/i/29707532"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 16,
-      "name": "功能类-刷到游戏视频时[上滑]",
-      "desc": "游戏类推广视频",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionDelay": 200,
-          "swipeArg": {
-            "start": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.6"
-            },
-            "end": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.3"
-            },
-            "duration": 200
-          },
-          "activityIds": ".main.MainActivity",
-          "matches": "[text$=\"游戏\"][text.length<6][index=1][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/21142871",
-            "https://i.gkd.li/i/21725628"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 17,
-      "name": "功能类-刷到直播时[上滑]",
-      "desc": "不想看直播,划掉",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionDelay": 200,
-          "swipeArg": {
-            "start": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.6"
-            },
-            "end": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.3"
-            },
-            "duration": 200
-          },
-          "activityIds": ".main.MainActivity",
-          "matches": "[desc*=\"点击进入直播间\"] < [childCount>1] < FrameLayout < [childCount=1] < [visibleToUser=true] < [vid=\"root_view\"] <2 [vid=\"viewpager\"]",
-          "snapshotUrls": "https://i.gkd.li/i/32612015",
-          "exampleUrls": "https://e.gkd.li/9f3f9eb2-4e56-4744-874c-223e28f5ddfe"
-        }
-      ]
-    },
-    {
-      "key": 18,
-      "name": "功能类-自动领取别人发的红包",
-      "desc": "点击 ①抖音红包 ②弹窗-开红包 ③返回 ④x掉已领完弹窗",
-      "fastQuery": true,
-      "activityIds": ".fund.redpacket.RedPacketReceiveActivity",
-      "rules": [
-        {
-          "name": "①点击[抖音红包]",
-          "activityIds": ".main.MainActivity",
-          "matches": "FrameLayout[width>10] -2 @LinearLayout >3 [text=\"抖音红包\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/6c963e99-1a74-40a5-bf84-a9353c27acdb",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/22761277",
-            "https://i.gkd.li/i/25190308"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/22849224",
-          "fastQuery": true
-        },
-        {
-          "preKeys": 0,
-          "name": "②红包弹窗-点击[开]",
-          "matches": "@FrameLayout[clickable=true][width=height] -2 [text=\"大吉大利\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/e8b822c1-c289-4802-85a4-994093024b24",
-          "snapshotUrls": "https://i.gkd.li/i/22761510",
-          "fastQuery": true,
-          "activityIds": ".fund.redpacket.RedPacketReceiveActivity"
-        },
-        {
-          "preKeys": 1,
-          "name": "③已领-点击[返回]",
-          "matches": "[vid=\"iv_back\"][visibleToUser=true]",
-          "exampleUrls": "https://e.gkd.li/f92c1412-8111-40bc-8188-24f2c004c55c",
-          "snapshotUrls": "https://i.gkd.li/i/22761554",
-          "fastQuery": true,
-          "activityIds": ".fund.redpacket.RedPacketReceiveActivity"
-        },
-        {
-          "preKeys": [
-            0,
-            1,
-            2
-          ],
-          "name": "④已领完弹窗-x掉",
-          "matches": "@ImageView[clickable=true] - * > [text=\"红包已领完\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/25190699",
-          "fastQuery": true,
-          "activityIds": ".fund.redpacket.RedPacketReceiveActivity"
-        }
-      ]
-    },
-    {
-      "key": 19,
-      "name": "功能类-自动抢口令红包",
-      "desc": "点击 ①口令红包 ②弹窗 ③一键发口令",
-      "fastQuery": true,
-      "rules": [
-        {
-          "name": "①点进口令红包",
-          "activityIds": [
-            ".main.MainActivity",
-            ".fund.redpacket.RedPacketReceiveActivity"
-          ],
-          "matches": "@ImageView + [text=\"抖音红包「口令」\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/25121991",
-          "fastQuery": true
-        },
-        {
-          "name": "②弹窗-点击红包",
-          "activityIds": ".fund.redpacket.RedPacketReceiveActivity",
-          "matches": "ImageView < @[clickable=true] -2 [text=\"发口令开红包\"]",
-          "snapshotUrls": "https://i.gkd.li/i/25122030",
-          "fastQuery": true
-        },
-        {
-          "name": "③一键发口令",
-          "activityIds": ".fund.redpacket.RedPacketReceiveActivity",
-          "matches": "[text=\"发口令开红包\"] + LinearLayout >2 [text=\"一键发送到聊天\"][clickable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25122077",
-            "https://i.gkd.li/i/25122095"
-          ],
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 20,
       "name": "权限提示-相机权限",
       "desc": "点击[以后再说]",
@@ -743,117 +499,6 @@ export default defineGkdApp({
           "exampleUrls": "https://e.gkd.li/d96ef7c1-1f24-43fd-9190-76764dae2bc3",
           "actionMaximum": 1,
           "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 21,
-      "name": "功能类-评论区-自动展开评论",
-      "desc": "只展开一级评论，不点击展示更多",
-      "fastQuery": true,
-      "activityIds": [
-        ".detail.ui.DetailActivity",
-        ".main.MainActivity",
-        "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-        ".searcharticle.detail.ArticleDetailActivity",
-        ".search.activity.SearchResultActivity",
-        ".detail.ultra.ui.UltraDetailActivity",
-        ".playlet.videodetail.PlayletVideoPlayActivity"
-      ],
-      "rules": [
-        {
-          "matches": "@[clickable=true] > [text^=\"展开\"][text$=\"回复\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25356027",
-            "https://i.gkd.li/i/26240597",
-            "https://i.gkd.li/i/26240834",
-            "https://i.gkd.li/i/32637248"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/25356355",
-          "exampleUrls": [
-            "https://e.gkd.li/e9ca5fe1-a60c-4ed8-9974-9d79e32c71d7",
-            "https://e.gkd.li/c58e3455-2d7e-4ce2-8c0f-a971386f5ef4"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".main.MainActivity",
-            "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
-        },
-        {
-          "matches": "[text^=\"展开\"][text$=\"回复\"] <2 @[clickable=true][childCount=3] <<n ViewPager <(3,4) LinearLayout + [childCount=2] > [desc$=\"评论区\"] + [vid=\"back_btn\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/29811099",
-            "https://i.gkd.li/i/29811533",
-            "https://i.gkd.li/i/31308121"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".main.MainActivity",
-            "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 22,
-      "name": "功能类-评论区-自动展开评论_全部",
-      "desc": "基于上面追加点击展开更多",
-      "fastQuery": true,
-      "activityIds": [
-        ".detail.ui.DetailActivity",
-        ".main.MainActivity",
-        "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-        ".searcharticle.detail.ArticleDetailActivity",
-        ".search.activity.SearchResultActivity",
-        ".detail.ultra.ui.UltraDetailActivity",
-        ".playlet.videodetail.PlayletVideoPlayActivity"
-      ],
-      "rules": [
-        {
-          "matches": "@[clickable=true] > [text^=\"展开更多\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25619324",
-            "https://i.gkd.li/i/25619463"
-          ],
-          "exampleUrls": [
-            "https://e.gkd.li/c9f1e163-4fa9-42bb-b5a5-4c9de6f286c2",
-            "https://e.gkd.li/afea1f82-e50c-4ef0-9f0a-a2ceec00c03b"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".main.MainActivity",
-            "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
-        },
-        {
-          "matches": "[text^=\"展开更多\"] <2 @[clickable=true][childCount=3] <<n ViewPager <(3,4) LinearLayout + [childCount=2] > [desc$=\"评论区\"] + [vid=\"back_btn\"]",
-          "snapshotUrls": "https://i.gkd.li/i/31308553",
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".main.MainActivity",
-            "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
         }
       ]
     },
@@ -899,38 +544,6 @@ export default defineGkdApp({
             "https://i.gkd.li/i/29606115"
           ],
           "exampleUrls": "https://e.gkd.li/f4c54b34-7d3c-499d-9ea0-f865f4cf9375",
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".main.MainActivity",
-            "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 25,
-      "name": "功能类-评论区-展开部分折叠评论",
-      "desc": "最底部已折叠部分评论-> 点击[展开]",
-      "fastQuery": true,
-      "activityIds": [
-        ".detail.ui.DetailActivity",
-        ".main.MainActivity",
-        "com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-        ".searcharticle.detail.ArticleDetailActivity",
-        ".search.activity.SearchResultActivity",
-        ".detail.ultra.ui.UltraDetailActivity",
-        ".playlet.videodetail.PlayletVideoPlayActivity"
-      ],
-      "rules": [
-        {
-          "matches": "@[text=\"展开\"][clickable=true] - [text=\"已折叠部分评论\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/29389970",
-          "exampleUrls": "https://e.gkd.li/020fc4d1-784a-49bd-9a50-6504e0b040ae",
           "fastQuery": true,
           "activityIds": [
             ".detail.ui.DetailActivity",
@@ -997,76 +610,6 @@ export default defineGkdApp({
           ],
           "snapshotUrls": "https://i.gkd.li/i/29403171",
           "exampleUrls": "https://e.gkd.li/cbf081a4-4a57-4173-af3a-27334d7a2be6"
-        }
-      ]
-    },
-    {
-      "key": 29,
-      "name": "功能类-横屏直播时自动[关闭]弹幕",
-      "desc": "点击1次[关闭弹幕]图标",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "activityIds": [
-            ".live.LivePlayActivity",
-            ".detail.ui.DetailActivity"
-          ],
-          "matches": "@[desc=\"关闭弹幕\"] < [childCount=2] + * > [text=\"发弹幕说点什么…\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/33672005",
-            "https://i.gkd.li/i/33672759"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/33672707",
-          "exampleUrls": "https://e.gkd.li/27cd54c6-0398-4e01-8b42-9fd9b963c514"
-        }
-      ]
-    },
-    {
-      "key": 30,
-      "name": "功能类-自动开启[自动连播]",
-      "desc": "仅在刚进抖音时第1个视频生效, ①[长按]视频 ②开启[自动联播]",
-      "fastQuery": true,
-      "matchRoot": true,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "activityIds": ".main.MainActivity",
-      "rules": [
-        {
-          "name": "①[长按]视频",
-          "action": "longClickCenter",
-          "matches": "[vid=\"viewpager\"][desc=\"视频\"][childCount=2][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/34400931",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/34424096",
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": ".main.MainActivity"
-        },
-        {
-          "preKeys": 0,
-          "name": "②开启[自动联播]",
-          "matches": "@Switch[clickable=true][checked=false] - [text=\"自动连播\"]",
-          "snapshotUrls": "https://i.gkd.li/i/34400219",
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": ".main.MainActivity"
-        },
-        {
-          "preKeys": 0,
-          "name": "③已开-按[返回键]",
-          "action": "back",
-          "actionMaximumKey": 1,
-          "matches": "@Switch[clickable=true][checked=true] - [text=\"自动连播\"]",
-          "snapshotUrls": "https://i.gkd.li/i/34400216",
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": ".main.MainActivity"
         }
       ]
     },
@@ -1168,22 +711,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 35,
-      "name": "功能类-设置无声进入抖音弹窗",
-      "desc": "点击[拒绝]",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13256087",
-      "rules": [
-        {
-          "matches": "@[text=\"拒绝\"] + [text=\"去设置\"]",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity"
-        }
-      ]
-    },
-    {
       "key": 36,
       "name": "全屏广告-休息提醒",
       "enable": false,
@@ -1193,49 +720,6 @@ export default defineGkdApp({
           "matches": "[text=\"管理使用时间\"] + Button[text=\"忽略提醒\"]",
           "snapshotUrls": "https://i.gkd.li/i/13372725",
           "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 37,
-      "name": "功能类-[添加快捷方式到桌面]弹窗",
-      "desc": "关闭弹窗",
-      "enable": false,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "name": "搜索快捷方式",
-          "activityIds": "com.ss.android.ugc.aweme.search.activity.SearchResultActivity",
-          "action": "back",
-          "matches": "ViewGroup[desc=\"添加搜索到桌面\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13338556",
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "name": "商城快捷方式",
-          "fastQuery": true,
-          "activityIds": [
-            "com.ss.android.ugc.aweme.main.MainActivity",
-            "com.ss.android.ugc.aweme.live.LiveDummyActivity"
-          ],
-          "matches": "[text=\"添加抖音商城到桌面\"] +2 LinearLayout > [text=\"不感兴趣\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13669682",
-            "https://i.gkd.li/i/14740312"
-          ],
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "name": "搜索组件",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.ugc.aweme.search.activity.SearchResultActivity",
-          "matches": "[text=\"暂不开启\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14325749",
-          "actionMaximum": 1,
-          "resetMatch": "app"
         }
       ]
     },
@@ -1351,24 +835,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 44,
-      "name": "功能类-关闭用户推荐",
-      "enable": false,
-      "rules": [
-        {
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
-          "matches": "[text=\"换一个\"] - FrameLayout[clickable=true] > ImageView[clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/12520943"
-        },
-        {
-          "preKeys": 0,
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
-          "matches": "[id=\"com.ss.android.ugc.aweme:id/desc\"][text=\"减少此类推荐\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12520962"
-        }
-      ]
-    },
-    {
       "key": 45,
       "name": "全屏广告-广告弹窗",
       "enable": false,
@@ -1399,37 +865,6 @@ export default defineGkdApp({
           "actionMaximum": 1,
           "resetMatch": "app",
           "activityIds": "com.ss.android.ugc.aweme.main.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 47,
-      "name": "功能类-休息提醒",
-      "enable": false,
-      "fastQuery": true,
-      "rules": [
-        {
-          "matches": "[text=\"可进入使用管理助手更改设置\"] -2 Button[text=\"取消\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13241564",
-            "https://i.gkd.li/i/13372604"
-          ],
-          "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 48,
-      "name": "功能类-申请开启小组件弹窗",
-      "desc": "点击【暂不开启】",
-      "enable": false,
-      "rules": [
-        {
-          "name": "搜索小组件",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.ugc.aweme.search.activity.SearchResultActivity",
-          "matches": "[text=\"开启搜索组件到桌面\"] +2 [text=\"暂不开启\"]",
-          "snapshotUrls": "https://i.gkd.li/i/14123300"
         }
       ]
     },

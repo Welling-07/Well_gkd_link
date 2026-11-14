@@ -248,34 +248,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-各级页面添加到首页弹窗",
-      "desc": "点击退出",
-      "fastQuery": true,
-      "activityIds": [
-        "com.taobao.themis.container.app.TMSActivity",
-        "com.alibaba.triver.container.TriverMainActivity"
-      ],
-      "snapshotUrls": [
-        "https://i.gkd.li/i/13197553",
-        "https://i.gkd.li/i/13197546"
-      ],
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": [
-            "com.taobao.themis.container.app.TMSActivity",
-            "com.alibaba.triver.container.TriverMainActivity"
-          ],
-          "matches": "TextView[text=\"去首页\"] + TextView[text=\"退出\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13197553",
-            "https://i.gkd.li/i/13197546"
-          ]
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "更新提示",
       "order": -9,
@@ -312,67 +284,6 @@ export default defineGkdApp({
           "fastQuery": true,
           "actionMaximum": 1,
           "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-关闭小额免密支付",
-      "desc": "在支付前/后出现",
-      "fastQuery": true,
-      "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-      "rules": [
-        {
-          "name": "①点击[关闭]或[不感兴趣]",
-          "matches": "[text=\"关闭\" || text=\"不感兴趣\"] < @[clickable=true] <3 * < * + * >3 [text$=\"小额免密支付\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/2322af2e-52e2-4059-9757-f26940f4b2fc",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13438414",
-            "https://i.gkd.li/i/26826092"
-          ],
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity"
-        },
-        {
-          "name": "②取消勾选",
-          "matches": "@[checked=true] < * - [text=\"开通淘宝小额免密支付\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/3ae78555-c0a5-4f76-8096-c4d1593ebb77",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14471853",
-            "https://i.gkd.li/i/14471858"
-          ],
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": "[text=\"关闭\"] < @[clickable=true] <3 * < * + * >3 [text$=\"小额免密支付\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/2322af2e-52e2-4059-9757-f26940f4b2fc",
-          "snapshotUrls": "https://i.gkd.li/i/13438414"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-将小组件添加到手机桌面",
-      "desc": "点击取消",
-      "activityIds": "com.alibaba.triver.container.TriverMainActivity",
-      "rules": [
-        {
-          "action": "clickCenter",
-          "matches": "View[text=\"立即添加\"] + View[text=\"取消\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13598578",
-          "activityIds": "com.alibaba.triver.container.TriverMainActivity"
-        },
-        {
-          "action": "clickCenter",
-          "matches": "View[childCount=2] >3 View[text=\"立即添加\"] + View[text=\"取消\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13598578",
-            "https://i.gkd.li/i/13853510"
-          ],
-          "activityIds": "com.alibaba.triver.container.TriverMainActivity"
         }
       ]
     },
@@ -456,25 +367,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 12,
-      "name": "功能类-登录授权",
-      "desc": "点击[确认授权]",
-      "rules": [
-        {
-          "activityIds": [
-            "com.taobao.browser.BrowserActivity",
-            "com.taobao.themis.container.app.TMSActivity"
-          ],
-          "matches": "[text=\"确认授权\"][clickable=true]",
-          "exampleUrls": "https://e.gkd.li/e6250a9c-3fee-4470-8c7c-1d28ea63d2a5",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/18271783",
-            "https://i.gkd.li/i/28432106"
-          ]
-        }
-      ]
-    },
-    {
       "key": 13,
       "name": "全屏广告-支付后的推荐弹窗",
       "desc": "点击关闭",
@@ -497,54 +389,6 @@ export default defineGkdApp({
           "activityIds": "com.taobao.weex.WXActivity",
           "matches": "@ImageView[clickable=true][width<150 && height<155] < FrameLayout <2 FrameLayout < FrameLayout < FrameLayout < FrameLayout <2 [vid=\"weex_render_view\"]",
           "snapshotUrls": "https://i.gkd.li/i/23923991"
-        }
-      ]
-    },
-    {
-      "key": 14,
-      "name": "功能类-自动隐藏搜索页[猜你想搜][热榜]",
-      "desc": "点击隐藏 ①猜你想搜 ②热榜",
-      "fastQuery": true,
-      "activityIds": "com.taobao.search.uniform.SearchActivity",
-      "rules": [
-        {
-          "name": "①猜你想搜",
-          "matches": "[vid=\"hideBtn\"][desc=\"隐藏\"][clickable=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/23165368",
-            "https://i.gkd.li/i/23165384"
-          ],
-          "exampleUrls": "https://e.gkd.li/cce4690f-ada3-4de8-b7cd-31259ec6ef58",
-          "fastQuery": true,
-          "activityIds": "com.taobao.search.uniform.SearchActivity"
-        },
-        {
-          "name": "②热榜",
-          "matches": "@[desc=\"隐藏榜单\"][clickable=true] <n ViewGroup < [vid=\"dynamic_container\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/23165418",
-            "https://i.gkd.li/i/23165427"
-          ],
-          "exampleUrls": "https://e.gkd.li/1c06ab8e-178b-469e-8288-6e1b73e4c1e9",
-          "fastQuery": true,
-          "activityIds": "com.taobao.search.uniform.SearchActivity"
-        }
-      ]
-    },
-    {
-      "key": 15,
-      "name": "功能类-付款前邀开通先用后付",
-      "desc": "点击[不感兴趣]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": [
-            "[text*=\"先用后付服务协议\"]",
-            "@[clickable=true] > [text=\"不感兴趣\"]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/26426385",
-          "exampleUrls": "https://e.gkd.li/535839e5-4912-4c7e-96a4-d9b39a420a32"
         }
       ]
     },
@@ -657,68 +501,6 @@ export default defineGkdApp({
           "activityIds": "com.taobao.tao.welcome.Welcome",
           "matches": "@[desc=\"关闭按钮\"] - [vid=\"poplayer_native_state_id\"]",
           "snapshotUrls": "https://i.gkd.li/i/14060521"
-        }
-      ]
-    },
-    {
-      "key": 21,
-      "name": "功能类-\"「0元下单」权益\"弹窗",
-      "desc": "点击关闭",
-      "enable": false,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": "[text=\"关闭\"] < @FrameLayout[clickable=true] <3 FrameLayout[childCount=3] < * + FrameLayout[childCount=3] [text*=\"0元下单\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/a35c954d-5162-463c-aee3-b72b9c2d6625",
-          "snapshotUrls": "https://i.gkd.li/i/14155537"
-        }
-      ]
-    },
-    {
-      "key": 22,
-      "name": "功能类-关闭小额免密支付开关",
-      "enable": false,
-      "actionMaximum": 1,
-      "fastQuery": true,
-      "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-      "exampleUrls": "https://m.gkd.li/101449500/a9e21a7d-ab16-4ba4-b678-9fe8dcbb6c72",
-      "snapshotUrls": "https://i.gkd.li/i/14471660",
-      "rules": [
-        {
-          "matches": "@CheckBox[checked=true][checked=true] < * - [text~=\"开通(.*)免密支付\"]",
-          "actionMaximum": 1,
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity"
-        }
-      ]
-    },
-    {
-      "key": 23,
-      "name": "功能类-小额免密支付弹窗",
-      "desc": "点击关闭",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-      "snapshotUrls": "https://i.gkd.li/i/13438414",
-      "rules": [
-        {
-          "matches": "@[text=\"关闭\"] < * <3 * < * + * >3 [text$=\"小额免密支付\"]",
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity"
-        }
-      ]
-    },
-    {
-      "key": 24,
-      "name": "功能类-搜索结果-自动点击反馈理由",
-      "enable": false,
-      "activityIds": "com.taobao.search.sf.MainSearchResultActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14142196",
-      "rules": [
-        {
-          "matches": "[desc=\"不喜欢这个商品\"]",
-          "activityIds": "com.taobao.search.sf.MainSearchResultActivity"
         }
       ]
     }

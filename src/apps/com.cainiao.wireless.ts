@@ -217,40 +217,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-询问[是否要查询包裹]弹窗",
-      "desc": "点击[立即查看]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".homepage.view.activity.HomePageActivity",
-          "matches": "@[text=\"立即查看\"] < * - * >2 [text=\"您是否要查询包裹\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/eb48e137-66c3-4777-b65e-8f4f6b3bc4ee",
-          "snapshotUrls": "https://i.gkd.li/i/14913359"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.cainiao.wireless.homepage.view.activity.HomePageActivity",
-          "matches": "@[text=\"立即查看\"] < * - * >2 [text=\"您是否要查询包裹\"]",
-          "exampleUrls": "https://m.gkd.li/57941037/eb48e137-66c3-4777-b65e-8f4f6b3bc4ee",
-          "snapshotUrls": "https://i.gkd.li/i/14913359"
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-包裹页面-自动展开更多物流信息",
-      "desc": "点击[展开]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity",
-          "matches": "@[clickable=true] > View[desc=\"展开\"] <<n LinearLayout[vid=\"layout_root\"]",
-          "snapshotUrls": "https://i.gkd.li/i/15879126"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "其他-好友代取功能提示",
       "rules": [

@@ -204,87 +204,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-自动点击[查看原图]",
-      "rules": [
-        {
-          "activityIds": [
-            "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostTransparencyActivity",
-            "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity"
-          ],
-          "matches": "[desc=\"查看原图\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/15463399",
-            "https://i.gkd.li/i/27207770"
-          ],
-          "exampleUrls": "https://m.gkd.li/57941037/12b60303-4fb8-4786-b636-4efef10f3d78"
-        },
-        {
-          "activityIds": "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity",
-          "matches": "[desc=\"查看原图\"][visibleToUser=true]",
-          "exampleUrls": "https://m.gkd.li/57941037/12b60303-4fb8-4786-b636-4efef10f3d78",
-          "snapshotUrls": "https://i.gkd.li/i/15463399"
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-关闭小额免密支付",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.alipay.android.msp.ui.views.MspContainerActivity",
-          "matches": "@CheckBox[clickable=true][checked=true] < * - [text$=\"免密支付\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/23455398",
-            "https://i.gkd.li/i/23455378"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-Web登录自动授权",
-      "desc": "登录确认-打勾-确认登录",
-      "fastQuery": true,
-      "activityIds": "com.taobao.login4android.scan.QrScanActivity",
-      "rules": [
-        {
-          "actionMaximum": 1,
-          "resetMatch": "match",
-          "matches": "@[clickable=true] > [vid=\"confirm\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25619592",
-            "https://i.gkd.li/i/25620240"
-          ],
-          "fastQuery": true,
-          "activityIds": "com.taobao.login4android.scan.QrScanActivity"
-        },
-        {
-          "matches": [
-            "[text=\"服务协议及隐私保护\"]",
-            "[text=\"同意\"][clickable=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/25620304",
-          "fastQuery": true,
-          "activityIds": "com.taobao.login4android.scan.QrScanActivity"
-        },
-        {
-          "matches": [
-            "[text=\"扫码登录\"]",
-            "[text=\"确认登录\"][clickable=true][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/25619659",
-            "https://i.gkd.li/i/25620267"
-          ],
-          "exampleUrls": "https://e.gkd.li/9394183f-855c-4bd3-b089-272f6e9807ff",
-          "fastQuery": true,
-          "activityIds": "com.taobao.login4android.scan.QrScanActivity"
-        }
-      ]
-    },
-    {
       "key": 8,
       "name": "局部广告",
       "rules": [
@@ -310,24 +229,6 @@ export default defineGkdApp({
           "matches": "Image[width<60 && height<60] < @View <n [childCount=2] < [id=\"root\"] <<2 * <2 WebView <<2 [vid=\"fish_layer_container_id\"]",
           "snapshotUrls": "https://i.gkd.li/i/26837679",
           "exampleUrls": "https://e.gkd.li/d08c424f-8411-4d65-ba23-02703e328176"
-        }
-      ]
-    },
-    {
-      "key": 10,
-      "name": "功能类-自动[勾选]原图",
-      "desc": "选择发送图片时,点击1次[原图]",
-      "rules": [
-        {
-          "actionMaximum": 1,
-          "resetMatch": "match",
-          "activityIds": "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity",
-          "matches": "[clickable=true][desc=\"原图\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/30770701",
-            "https://i.gkd.li/i/30770836"
-          ],
-          "exampleUrls": "https://e.gkd.li/45d7ad2e-b436-4d30-be4b-a90584c3d2a0"
         }
       ]
     },

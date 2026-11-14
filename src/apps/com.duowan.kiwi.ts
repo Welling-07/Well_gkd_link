@@ -215,26 +215,6 @@ export default defineGkdApp({
           "actionMaximum": 1
         }
       ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-root提示",
-      "desc": "点击确认",
-      "enable": false,
-      "fastQuery": true,
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "snapshotUrls": "https://i.gkd.li/i/13536744",
-      "rules": [
-        {
-          "matches": "[text^=\"您的设备已经被ROOT\"] + LinearLayout [text=\"确认\"]",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
     }
   ]
 });

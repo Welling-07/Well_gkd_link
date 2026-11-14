@@ -66,34 +66,6 @@ export default defineGkdApp({
           "activityIds": "com.enflick.android.TextNow.activities.MainActivity"
         }
       ]
-    },
-    {
-      "key": 2,
-      "name": "功能类-设为默认应用提示",
-      "enable": false,
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "fastQuery": true,
-      "rules": [
-        {
-          "matches": "[id=\"com.enflick.android.TextNow:id/btn_dismiss\"][text=\"Not Now\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13630460",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "fastQuery": true
-        },
-        {
-          "preKeys": 0,
-          "matches": "[id=\"android:id/button2\"][text=\"SKIP\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13630463",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "fastQuery": true
-        }
-      ]
     }
   ]
 });

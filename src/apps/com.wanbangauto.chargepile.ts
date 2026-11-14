@@ -25,30 +25,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-签到提示",
-      "desc": "点击[忽略]",
-      "fastQuery": true,
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".ui.newhome.MainActivity",
-          "matches": [
-            "[text^=\"小星提醒您\"][visibleToUser=true]",
-            "[text=\"忽略\"][visibleToUser=true]"
-          ],
-          "exampleUrls": "https://e.gkd.li/542507c4-57dd-46f5-b354-78cdbacb3191",
-          "snapshotUrls": "https://i.gkd.li/i/18421092",
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
     }
   ]
 });

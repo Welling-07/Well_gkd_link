@@ -47,21 +47,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-重复[刷新]导航",
-      "desc": "每隔3秒点击[刷新路线]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionCd": 3000,
-          "activityIds": ".v2.main.EDMainActivity",
-          "matches": "@[clickable=true] > [text=\"刷新路线\"]",
-          "snapshotUrls": "https://i.gkd.li/i/33917313",
-          "exampleUrls": "https://e.gkd.li/684b4a64-1d41-4744-9b0c-0fe61dfbafe8"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "局部广告-小悬浮窗",
       "desc": "x掉",

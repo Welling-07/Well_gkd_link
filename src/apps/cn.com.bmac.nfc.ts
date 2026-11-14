@@ -23,25 +23,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-跳过协议",
-      "desc": "点击[同意]",
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".ui.activity.MainActivity",
-          "matches": "@[vid=\"Agree_and_continue\"] <<2 * - [vid=\"layout_title\"] >2 [vid=\"tv_privacy_content\"]",
-          "exampleUrls": "https://e.gkd.li/9c0ec080-3156-4276-b556-47cf20e08150",
-          "snapshotUrls": "https://i.gkd.li/i/21133268",
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
     }
   ]
 });

@@ -341,30 +341,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-自动确认线路",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "activityIds": ".MainActivity",
-          "matches": "[desc=\"进入拷贝漫画\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13233179",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        },
-        {
-          "matches": "[desc=\"进入拷贝漫画\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13233179",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "通知提示-公告弹窗",
       "matchTime": 30000,

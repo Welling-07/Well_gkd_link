@@ -543,25 +543,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-扫码后自动点击[授权登录]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".module.login.LoginPermissionActivity",
-          "matches": "[text=\"授权登录\"][clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/14830218"
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.netease.cloudmusic.module.login.LoginPermissionActivity",
-          "matches": "[text=\"授权登录\"][clickable=true]",
-          "exampleUrls": "https://m.gkd.li/57941037/f2aa603b-d1d1-4f92-86ae-e311e79a011d",
-          "snapshotUrls": "https://i.gkd.li/i/14830218"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "分段广告-搜索页广告",
       "desc": "该规则触发时会导致输入法收起",
@@ -683,25 +664,6 @@ export default defineGkdApp({
           "matches": "[id=\"com.netease.cloudmusic:id/skipBannerAd\"]",
           "snapshotUrls": "https://i.gkd.li/i/13768367",
           "fastQuery": true
-        }
-      ]
-    },
-    {
-      "key": 11,
-      "name": "功能类-功能升级弹窗",
-      "enable": false,
-      "rules": [
-        {
-          "name": "\"我的\"升级-下次再说",
-          "activityIds": "com.netease.cloudmusic.activity.MainActivity",
-          "matches": "[text=\"下次再说\"] < ViewGroup",
-          "snapshotUrls": "https://i.gkd.li/i/13804541"
-        },
-        {
-          "name": "\"社区广场\"升级-点击右上角x",
-          "activityIds": "com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity",
-          "matches": "[text=\"社区广场全新升级\"] + ViewGroup > ImageView",
-          "snapshotUrls": "https://i.gkd.li/i/13804544"
         }
       ]
     },

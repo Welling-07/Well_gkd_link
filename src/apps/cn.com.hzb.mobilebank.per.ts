@@ -21,21 +21,6 @@ export default defineGkdApp({
           ]
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-朗读版未登录时自动点击登录",
-      "rules": [
-        {
-          "fastQuery": true,
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": ".MainActivity",
-          "matches": "@TextView[text*=\"登录\"][clickable=true] <<5 [vid=\"h5_pc_container\"]",
-          "snapshotUrls": "https://i.gkd.li/i/31796888"
-        }
-      ]
     }
   ]
 });

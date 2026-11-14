@@ -42,62 +42,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-路线选择",
-      "desc": "选择路线，优先顺畅>普通>缓慢",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".MainActivity",
-          "anyMatches": [
-            "@ViewGroup[clickable=true][visibleToUser=true] > [text=\"顺畅\" || text=\"順暢\"]",
-            "@ViewGroup[clickable=true][visibleToUser=true] > [text=\"普通\"]",
-            "@ViewGroup[clickable=true][visibleToUser=true] > [text=\"缓慢\"]"
-          ],
-          "exampleUrls": [
-            "https://e.gkd.li/68004e70-6b78-41f2-b329-ff600038db94",
-            "https://e.gkd.li/66403e39-475b-447d-a708-db10be74eba8",
-            "https://e.gkd.li/930e1df4-5f1d-4a4d-bf78-6f1d8c5715de"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/20711163",
-            "https://i.gkd.li/i/20713674",
-            "https://i.gkd.li/i/20713715",
-            "https://i.gkd.li/i/20718557"
-          ],
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-点击[我保证我已满18岁]",
-      "matchTime": 10000,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".MainActivity",
-          "matches": "@ViewGroup[childCount=1][clickable=true][visibleToUser=true] > [text^=\"我保证我已满18岁\" || text^=\"我保證我已滿18歲\"]",
-          "exampleUrls": "https://e.gkd.li/f890ac7e-8626-4fc3-85c1-83d6776cb3f4",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/20711995",
-            "https://i.gkd.li/i/20718577"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/20713533",
-          "matchTime": 10000,
-          "actionMaximum": 1,
-          "resetMatch": "app"
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "开屏广告",
       "order": -10,
@@ -133,39 +77,6 @@ export default defineGkdApp({
             "https://i.gkd.li/i/14142408",
             "https://i.gkd.li/i/14205165"
           ],
-          "activityIds": "com.jiaohua_browser.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-已满18岁弹窗",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.jiaohua_browser.MainActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14141809",
-      "rules": [
-        {
-          "matches": "[text*=\"滿18歲\"]",
-          "fastQuery": true,
-          "activityIds": "com.jiaohua_browser.MainActivity"
-        }
-      ]
-    },
-    {
-      "key": 7,
-      "name": "功能类-签到活动",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.jiaohua_browser.MainActivity",
-      "snapshotUrls": [
-        "https://i.gkd.li/i/14141807",
-        "https://i.gkd.li/i/14205170"
-      ],
-      "rules": [
-        {
-          "matches": "@ViewGroup > [text=\"立即簽到\"][visibleToUser=true]",
-          "fastQuery": true,
           "activityIds": "com.jiaohua_browser.MainActivity"
         }
       ]

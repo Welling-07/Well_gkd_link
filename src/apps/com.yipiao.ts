@@ -72,19 +72,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 2,
-      "name": "功能类-添加桌面小组件",
-      "desc": "点击横幅右上角x",
-      "enable": false,
-      "rules": [
-        {
-          "activityIds": "com.app.main.entrance.MainActivity",
-          "matches": "TextView[text=\"去添加\"] + ImageView[id=\"com.yipiao:id/arg\"][clickable=true][focusable=true]",
-          "snapshotUrls": "https://i.gkd.li/i/13947145"
-        }
-      ]
-    },
-    {
       "key": 3,
       "name": "局部广告-代金券",
       "desc": "点击横幅右上角x",

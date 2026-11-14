@@ -10,8 +10,10 @@
 | `@adpro/gkd_subscription` | https://registry.npmmirror.com/@adpro/gkd_subscription/latest/files/dist/Adpro_gkd.json5（原作者已停止维护） |
 | `id667` | https://gkd-subscription-667.pages.dev/gkd.json5 |
 
-合并结果：**1075 个应用 / 3302 个组 / 7216 条规则**（含 6 个全局组、14 条全局规则），其中 716 个组默认关闭。相同条目只保留一份，组级默认值已物化进规则，跨源点击链（`preKeys` / `actionMaximumKey` / `actionCdKey` / `scopeKeys`）已重新映射。
+合并结果：**996 个应用 / 2721 个组 / 6191 条规则**（含 6 个全局组、14 条全局规则），12 个分类，其中 621 个组默认关闭。相同条目只保留一份，组级默认值已物化进规则，跨源点击链（`preKeys` / `actionMaximumKey` / `actionCdKey` / `scopeKeys`）已重新映射。
 
+> 已删除全部「功能类」分组（自动点击、自动展开、自动点赞/倍速等非屏蔽类规则，共 581 组 / 1025 条规则），只保留开屏广告、更新提示、权限提示、局部/全屏/分段广告、通知提示、评价提示、青少年模式等屏蔽类规则。79 个应用因规则全部属于「功能类」而被整体移除。
+>
 > 同一组内出现重名的规则会被追加 ` (2)`、` (3)` 后缀，因为 `checkSubscription` 要求组内规则名唯一。
 
 ## 订阅地址
@@ -40,7 +42,7 @@ scripts/build.ts         模板自带：调用 updateDist 生成 dist
 scripts/local_build.mjs  无 pnpm / tsx 环境时的等价校验与构建脚本
 src/subscription.ts      订阅元信息（id、名称、作者、supportUri、checkUpdateUrl）
 src/apps/<packageId>.ts  每个应用一个文件，由 scripts/generate.ts 生成
-src/categories.ts        13 个分类，自动生成
+src/categories.ts        12 个分类，自动生成
 src/globalGroups.ts      6 个全局组，自动生成
 dist/                    构建产物：gkd.json5 / gkd.version.json5 / CHANGELOG.md / README.md
 ```

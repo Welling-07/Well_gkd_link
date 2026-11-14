@@ -102,43 +102,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 3,
-      "name": "功能类-关闭[开启WPS云服务]弹窗",
-      "desc": "自动点击不开启",
-      "fastQuery": true,
-      "activityIds": [
-        "cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity",
-        "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI",
-        "com.tencent.mm.ui.base.w"
-      ],
-      "rules": [
-        {
-          "matches": "[vid=\"cloud_protocol_dialog_not_start_btn\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/12882536",
-            "https://i.gkd.li/i/12882610",
-            "https://i.gkd.li/i/12882678"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            "cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity",
-            "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI",
-            "com.tencent.mm.ui.base.w"
-          ]
-        },
-        {
-          "matches": "[vid=\"dialog_button_positive\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12882554",
-          "fastQuery": true,
-          "activityIds": [
-            "cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity",
-            "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI",
-            "com.tencent.mm.ui.base.w"
-          ]
-        }
-      ]
-    },
-    {
       "key": 4,
       "name": "分段广告-文档末尾广告",
       "fastQuery": true,
@@ -198,37 +161,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-自动签到",
-      "fastQuery": true,
-      "activityIds": "cn.wps.moffice.main.push.explore.PushTipsWebActivity",
-      "rules": [
-        {
-          "matches": "@[visibleToUser=true][text=\"签到\"] <<n [vid=\"push_tips_ptr_super_webview\"]",
-          "exampleUrls": "https://e.gkd.li/c83fe3b0-74f2-45af-9f8d-6b70c622b424",
-          "snapshotUrls": "https://i.gkd.li/i/16382069",
-          "fastQuery": true,
-          "activityIds": "cn.wps.moffice.main.push.explore.PushTipsWebActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "[text=\"签到成功\"] -2 * > @Image[text!=null] <<4 [index=parent.childCount.minus(2)] <n View <<2 WebView <<4 [vid=\"push_tips_ptr_super_webview\"]",
-          "exampleUrls": "https://e.gkd.li/c8c2f3cb-9bde-4a01-8eb6-145cf668993f",
-          "snapshotUrls": "https://i.gkd.li/i/16382075",
-          "fastQuery": true,
-          "activityIds": "cn.wps.moffice.main.push.explore.PushTipsWebActivity"
-        },
-        {
-          "preKeys": 0,
-          "matches": "[text=\"签到成功\"] -2 View[childCount=1] > @Image[text!=null][childCount=0] <<n [vid=\"push_tips_ptr_super_webview\"]",
-          "exampleUrls": "https://e.gkd.li/c8c2f3cb-9bde-4a01-8eb6-145cf668993f",
-          "snapshotUrls": "https://i.gkd.li/i/16382075",
-          "fastQuery": true,
-          "activityIds": "cn.wps.moffice.main.push.explore.PushTipsWebActivity"
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "评价提示",
       "rules": [
@@ -268,19 +200,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 9,
-      "name": "功能类-关闭[登录WPS]弹窗",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "cn.wps.moffice.main.local.HomeRootActivity",
-          "matches": "[vid=\"login_viewpager\"] > [vid=\"public_login_cancel\"][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/28419420",
-          "exampleUrls": "https://e.gkd.li/73900c79-8d76-47ba-9dd2-853a9a30d533"
-        }
-      ]
-    },
-    {
       "key": 10,
       "name": "局部广告-会员功能试用提示",
       "desc": "主页顶部功能试用=> x掉",
@@ -314,44 +233,6 @@ export default defineGkdApp({
           "activityIds": [
             "cn.wps.moffice.main.AfterLoginActivity",
             "com.android.packageinstaller.permission.ui.GrantPermissionsActivity"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 12,
-      "name": "功能类-开启WPS云服务",
-      "desc": "自动点击不开启",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": [
-        "cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity",
-        "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI",
-        "com.tencent.mm.ui.base.w"
-      ],
-      "rules": [
-        {
-          "matches": "[id=\"cn.wps.moffice_eng:id/cloud_protocol_dialog_not_start_btn\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/12882536",
-            "https://i.gkd.li/i/12882610",
-            "https://i.gkd.li/i/12882678"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            "cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity",
-            "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI",
-            "com.tencent.mm.ui.base.w"
-          ]
-        },
-        {
-          "matches": "[id=\"cn.wps.moffice_eng:id/dialog_button_positive\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12882554",
-          "fastQuery": true,
-          "activityIds": [
-            "cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity",
-            "com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI",
-            "com.tencent.mm.ui.base.w"
           ]
         }
       ]

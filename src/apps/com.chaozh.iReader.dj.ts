@@ -198,24 +198,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-退出阅读跳过加书架提示",
-      "desc": "小说退出-加入书架提示-退出阅读",
-      "fastQuery": true,
-      "rules": [
-        {
-          "activityIds": "com.zhangyue.iReader.read.ui.Activity_BookBrowser_TXT",
-          "matches": [
-            "[text=\"加入书架，方便下次阅读\"]",
-            "[text=\"退出阅读\"][clickable=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/25244345",
-          "exampleUrls": "https://e.gkd.li/942bc38e-ca66-4f64-b37a-a5930b5c145a",
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "全屏广告-红包弹窗",
       "desc": "x掉",

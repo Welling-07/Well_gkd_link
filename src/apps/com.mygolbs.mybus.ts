@@ -319,24 +319,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-签到成功弹窗",
-      "desc": "点击关闭",
-      "activityIds": "com.mygolbs.mybus.guligold.SignSuccessActivity",
-      "snapshotUrls": "https://i.gkd.li/i/12716035",
-      "rules": [
-        {
-          "activityIds": ".guligold.SignSuccessActivity",
-          "matches": "@[vid=\"iv_close\"] < RelativeLayout - LinearLayout >n [text=\"签到成功\"]",
-          "snapshotUrls": "https://i.gkd.li/i/12716035"
-        },
-        {
-          "matches": "@[id=\"com.mygolbs.mybus:id/iv_close\"] < RelativeLayout - LinearLayout >n [text=\"签到成功\"]",
-          "activityIds": "com.mygolbs.mybus.guligold.SignSuccessActivity"
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "开屏广告",
       "order": -10,

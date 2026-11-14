@@ -39,10 +39,6 @@ export default defineGkdCategories([
     "name": "分段广告"
   },
   {
-    "key": 9,
-    "name": "功能类"
-  },
-  {
     "key": 10,
     "name": "其他"
   },

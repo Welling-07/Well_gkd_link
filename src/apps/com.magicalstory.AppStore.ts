@@ -231,24 +231,6 @@ export default defineGkdApp({
           "activityIds": "com.magicalstory.AppStore.main.MainActivity"
         }
       ]
-    },
-    {
-      "key": 6,
-      "name": "功能类-签到页-自动签到",
-      "desc": "签到页自动点击【签到】按钮",
-      "enable": false,
-      "fastQuery": true,
-      "actionMaximum": 1,
-      "activityIds": "com.magicalstory.AppStore.user.sign.signActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14168441",
-      "rules": [
-        {
-          "matches": "[text=\"签到\"][vid=\"button\"]",
-          "fastQuery": true,
-          "actionMaximum": 1,
-          "activityIds": "com.magicalstory.AppStore.user.sign.signActivity"
-        }
-      ]
     }
   ]
 });

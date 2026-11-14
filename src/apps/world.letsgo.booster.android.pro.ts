@@ -60,22 +60,6 @@ export default defineGkdApp({
           "actionMaximum": 1
         }
       ]
-    },
-    {
-      "key": 3,
-      "name": "功能类-免费会员弹窗",
-      "desc": "点击【快快收下】",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "world.letsgo.booster.android.pages.home.HomeActivity",
-      "snapshotUrls": "https://i.gkd.li/i/14072381",
-      "rules": [
-        {
-          "matches": "[text=\"快快收下\"]",
-          "fastQuery": true,
-          "activityIds": "world.letsgo.booster.android.pages.home.HomeActivity"
-        }
-      ]
     }
   ]
 });

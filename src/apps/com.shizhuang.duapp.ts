@@ -17,22 +17,6 @@ export default defineGkdApp({
           "snapshotUrls": "https://i.gkd.li/i/13473449"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-截屏分享",
-      "desc": "关闭截屏时app弹出的分享弹窗",
-      "enable": false,
-      "fastQuery": true,
-      "activityIds": "com.shizhuang.duapp.modules.product_detail.detailv4.ui.ProductDetailActivityV4",
-      "snapshotUrls": "https://i.gkd.li/i/13473449",
-      "rules": [
-        {
-          "matches": "[id=\"com.shizhuang.duapp:id/ivClose\"] +2 [id=\"com.shizhuang.duapp:id/ivSave\"]",
-          "fastQuery": true,
-          "activityIds": "com.shizhuang.duapp.modules.product_detail.detailv4.ui.ProductDetailActivityV4"
-        }
-      ]
     }
   ]
 });

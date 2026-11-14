@@ -52,20 +52,6 @@ export default defineGkdApp({
           "resetMatch": "app"
         }
       ]
-    },
-    {
-      "key": 1,
-      "name": "功能类-已黑阈无法打开app",
-      "desc": "每次打开弹窗-取消",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".ui.BreventActivity",
-          "matches": "LinearLayout[childCount=3] >2 *[childCount=2] > [text=\"取消\"][clickable=true][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/26143603",
-          "exampleUrls": "https://e.gkd.li/9a61e111-6285-41bd-b5fd-ec64a0e2675e"
-        }
-      ]
     }
   ]
 });

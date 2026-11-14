@@ -25,28 +25,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 1,
-      "name": "功能类-功能体验邀请弹窗",
-      "rules": [
-        {
-          "name": "[首页商城]体验邀请弹窗",
-          "fastQuery": true,
-          "activityIds": "com.ss.android.ugc.aweme.commerce.sdk.MallContainerActivity",
-          "matches": [
-            "UIText[text^=\"立即体验\"]",
-            "FlattenUIText[text=\"不再提示\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": "https://i.gkd.li/i/13684791"
-        },
-        {
-          "name": "\"首页商城\"体验邀请弹窗",
-          "activityIds": "com.ss.android.ugc.aweme.commerce.sdk.MallContainerActivity",
-          "matches": "[text=\"不再提示\"] + @ECCustomUiImage[clickable=true] +n LynxFlattenUI[text^=\"立即体验\"]",
-          "snapshotUrls": "https://i.gkd.li/i/13684791"
-        }
-      ]
-    },
-    {
       "key": 2,
       "name": "局部广告-打招呼表情",
       "desc": "聊天界面,朋友在线,打个招呼... 点击x掉",
@@ -147,31 +125,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 5,
-      "name": "功能类-选择图片时自动勾选原图",
-      "fastQuery": true,
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": "com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity",
-          "matches": "[text=\"原图\"][desc^=\"未选中\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13946092",
-            "https://i.gkd.li/i/13946033"
-          ]
-        },
-        {
-          "activityIds": "com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity",
-          "matches": "[id=\"com.ss.android.ugc.aweme.lite:id/amh\"][desc^=\"未选中\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/13946092",
-            "https://i.gkd.li/i/13946033"
-          ],
-          "fastQuery": true
-        }
-      ]
-    },
-    {
       "key": 6,
       "name": "全屏广告",
       "rules": [
@@ -208,43 +161,6 @@ export default defineGkdApp({
           "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
           "matches": "@ImageView[clickable=true] - [text$=\"桌面小组件\"]",
           "snapshotUrls": "https://i.gkd.li/i/25208769"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-刷到推广视频时[上滑]",
-      "desc": "广告/应用/购物/游戏/咨询/预约/子薇剧场 等推广视频",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionCd": 300,
-          "actionDelay": 200,
-          "swipeArg": {
-            "start": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.6"
-            },
-            "end": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.3"
-            },
-            "duration": 200
-          },
-          "activityIds": [
-            "com.ss.android.ugc.aweme.main.MainActivity",
-            "com.ss.android.ugc.aweme.detail.ultra.ui.UltraDetailActivity",
-            "com.ss.android.ugc.aweme.detail.ui.DetailActivity"
-          ],
-          "matches": "([text$=\"广告 展开\" || text$=\"广告 收起\" || text$=\"广告 \"][vid=\"desc\"][visibleToUser=true]) || ([text=\"应用\" || text=\"购物\" || text$=\"游戏\" || text=\"咨询\" || text=\"子薇剧场\" || text=\"预约\"][text.length<6][index=1][visibleToUser=true])",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/29214101",
-            "https://i.gkd.li/i/29579093",
-            "https://i.gkd.li/i/29686900",
-            "https://i.gkd.li/i/32619091",
-            "https://i.gkd.li/i/29214002"
-          ],
-          "excludeSnapshotUrls": "https://i.gkd.li/i/29686899"
         }
       ]
     },
@@ -295,149 +211,6 @@ export default defineGkdApp({
           "exampleUrls": "https://e.gkd.li/c1314e68-d89a-42e3-af74-c50303f5546a",
           "fastQuery": true,
           "activityIds": "com.ss.android.ugc.aweme.search.activity.SearchResultActivity"
-        }
-      ]
-    },
-    {
-      "key": 11,
-      "name": "功能类-自动切换到[作品]列表",
-      "desc": "在用户主页时,若存在[橱窗/商品/服务],则点击[作品]",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionCd": 10000,
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
-          "matches": "[visibleToUser=false] < ViewPager[childCount>1] - ViewGroup >3 @[desc^=\"作品\"][clickable=true] +n [name$=\"ActionBar$Tab\"] >3 [text=\"橱窗\" || text=\"商品\" || text=\"服务\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/30619207",
-            "https://i.gkd.li/i/30619569",
-            "https://i.gkd.li/i/30621467",
-            "https://i.gkd.li/i/30621712"
-          ],
-          "excludeSnapshotUrls": [
-            "https://i.gkd.li/i/30619208",
-            "https://i.gkd.li/i/30619506"
-          ],
-          "exampleUrls": "https://e.gkd.li/966b01bd-3c89-4f19-83af-7e9429ab25ed"
-        }
-      ]
-    },
-    {
-      "key": 12,
-      "name": "功能类-评论区-自动展开评论",
-      "desc": "只展开一级评论，不点击展示更多",
-      "fastQuery": true,
-      "activityIds": [
-        ".detail.ui.DetailActivity",
-        ".com.ss.android.ugc.aweme.main.MainActivity",
-        ".com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-        ".searcharticle.detail.ArticleDetailActivity",
-        ".search.activity.SearchResultActivity",
-        ".detail.ultra.ui.UltraDetailActivity",
-        ".playlet.videodetail.PlayletVideoPlayActivity"
-      ],
-      "rules": [
-        {
-          "matches": "@[clickable=true] > [text^=\"展开\"][text$=\"回复\"]",
-          "snapshotUrls": "https://i.gkd.li/i/32755488",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/32755811",
-          "exampleUrls": [
-            "https://e.gkd.li/a2be5c9e-afe9-4992-8c83-bbe191d68d76",
-            "https://e.gkd.li/1609405d-5a20-445d-bb2f-5de5a9b1237d"
-          ],
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".com.ss.android.ugc.aweme.main.MainActivity",
-            ".com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 13,
-      "name": "功能类-评论区-自动展开评论_全部",
-      "desc": "基于上面追加点击展开更多",
-      "fastQuery": true,
-      "activityIds": [
-        ".detail.ui.DetailActivity",
-        ".com.ss.android.ugc.aweme.main.MainActivity",
-        ".com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-        ".searcharticle.detail.ArticleDetailActivity",
-        ".search.activity.SearchResultActivity",
-        ".detail.ultra.ui.UltraDetailActivity",
-        ".playlet.videodetail.PlayletVideoPlayActivity"
-      ],
-      "rules": [
-        {
-          "matches": "@[clickable=true] > [text^=\"展开更多\"]",
-          "snapshotUrls": "https://i.gkd.li/i/32755811",
-          "exampleUrls": "https://e.gkd.li/1609405d-5a20-445d-bb2f-5de5a9b1237d",
-          "fastQuery": true,
-          "activityIds": [
-            ".detail.ui.DetailActivity",
-            ".com.ss.android.ugc.aweme.main.MainActivity",
-            ".com.bytedance.ies.ugc.aweme.photos.detail.flow.page.FlowPageActivity",
-            ".searcharticle.detail.ArticleDetailActivity",
-            ".search.activity.SearchResultActivity",
-            ".detail.ultra.ui.UltraDetailActivity",
-            ".playlet.videodetail.PlayletVideoPlayActivity"
-          ]
-        }
-      ]
-    },
-    {
-      "key": 14,
-      "name": "功能类-自动开启[自动连播]",
-      "desc": "仅在刚进抖极时第1个视频生效, ①[长按]视频 ②开启[自动联播]",
-      "fastQuery": true,
-      "matchRoot": true,
-      "actionMaximum": 1,
-      "resetMatch": "app",
-      "activityIds": "com.ss.android.ugc.aweme.main.MainActivity",
-      "rules": [
-        {
-          "name": "①[长按]视频",
-          "action": "longClickCenter",
-          "matches": "[vid=\"viewpager\"][desc=\"视频\"][childCount=2][visibleToUser=true]",
-          "snapshotUrls": "https://i.gkd.li/i/34420783",
-          "excludeSnapshotUrls": "https://i.gkd.li/i/34418998",
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity"
-        },
-        {
-          "preKeys": 0,
-          "name": "②开启[自动联播]",
-          "matches": "@Switch[clickable=true][checked=false] - [text=\"自动连播\"]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/34423078",
-            "https://i.gkd.li/i/34419001"
-          ],
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity"
-        },
-        {
-          "preKeys": 0,
-          "name": "③已开-按[返回键]",
-          "action": "back",
-          "actionMaximumKey": 1,
-          "matches": "@Switch[clickable=true][checked=true] - [text=\"自动连播\"]",
-          "snapshotUrls": "https://i.gkd.li/i/34421280",
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionMaximum": 1,
-          "resetMatch": "app",
-          "activityIds": "com.ss.android.ugc.aweme.main.MainActivity"
         }
       ]
     },

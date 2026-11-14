@@ -160,32 +160,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 4,
-      "name": "功能类-点击收起顶部工具栏",
-      "rules": [
-        {
-          "fastQuery": true,
-          "activityIds": ".WeatherActivity",
-          "matches": "ViewGroup[childCount=2][visibleToUser=true] > [vid=\"fl_arrow\"][visibleToUser=true]",
-          "exampleUrls": "https://m.gkd.li/57941037/5bdf4f45-d66d-441e-a2ce-f32d5fc40796",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14814347",
-            "https://i.gkd.li/i/14814412"
-          ]
-        },
-        {
-          "fastQuery": true,
-          "activityIds": "com.nowcasting.activity.WeatherActivity",
-          "matches": "ViewGroup[childCount=2][visibleToUser=true] > [vid=\"fl_arrow\"][visibleToUser=true]",
-          "exampleUrls": "https://m.gkd.li/57941037/5bdf4f45-d66d-441e-a2ce-f32d5fc40796",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/14814347",
-            "https://i.gkd.li/i/14814412"
-          ]
-        }
-      ]
-    },
-    {
       "key": 5,
       "name": "综合广告-卡片广告",
       "enable": false,

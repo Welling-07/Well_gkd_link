@@ -169,55 +169,6 @@ export default defineGkdApp({
       ]
     },
     {
-      "key": 6,
-      "name": "功能类-刷到推广视频时[上滑]",
-      "desc": "广告/购物/游戏/汽车/咨询/应用/一键出片/品牌活动/测一测 等推广视频",
-      "rules": [
-        {
-          "fastQuery": true,
-          "actionCd": 300,
-          "actionDelay": 200,
-          "swipeArg": {
-            "start": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.6"
-            },
-            "end": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.3"
-            },
-            "duration": 200
-          },
-          "activityIds": "com.yxcorp.gifshow.HomeActivity",
-          "anyMatches": [
-            "[vid=\"ad_detail_content_layout\"][visibleToUser=true]",
-            "[vid=\"plc_tv_tag_label\"][text$=\"元\" || text$=\"人买过\"][visibleToUser=true]",
-            "[vid=\"plc_tv_biz_text\"][text=\"游戏\" || text=\"小游戏\" || text=\"购物\" || text=\"购买\" || text=\"汽车\" || text=\"咨询\" || text=\"应用\" || text=\"品牌活动\" || text=\"一键出片\" || text=\"测一测\"][visibleToUser=true]"
-          ],
-          "snapshotUrls": [
-            "https://i.gkd.li/i/29213590",
-            "https://i.gkd.li/i/33927176",
-            "https://i.gkd.li/i/33969241",
-            "https://i.gkd.li/i/29029850",
-            "https://i.gkd.li/i/29029852",
-            "https://i.gkd.li/i/32701451",
-            "https://i.gkd.li/i/29029853",
-            "https://i.gkd.li/i/29030087",
-            "https://i.gkd.li/i/29031982",
-            "https://i.gkd.li/i/30466714",
-            "https://i.gkd.li/i/29031736",
-            "https://i.gkd.li/i/29031815",
-            "https://i.gkd.li/i/30347040"
-          ],
-          "exampleUrls": "https://e.gkd.li/629b0f6b-49e7-4ca9-8487-5df7d530756f",
-          "excludeSnapshotUrls": [
-            "https://i.gkd.li/i/29032024",
-            "https://i.gkd.li/i/29032119"
-          ]
-        }
-      ]
-    },
-    {
       "key": 7,
       "name": "局部广告-用户资料页广告",
       "desc": "①点击x掉 ②点击[不感兴趣] ③选一个[理由]",
@@ -253,37 +204,6 @@ export default defineGkdApp({
           "exampleUrls": "https://e.gkd.li/efe7800d-896d-4503-8b41-52c5d18775a6",
           "fastQuery": true,
           "activityIds": "com.yxcorp.gifshow.profile.activity.UserProfileActivity"
-        }
-      ]
-    },
-    {
-      "key": 8,
-      "name": "功能类-刷到直播时[上滑]",
-      "desc": "不想看直播,划掉",
-      "rules": [
-        {
-          "fastQuery": true,
-          "matchRoot": true,
-          "actionCd": 300,
-          "actionDelay": 200,
-          "swipeArg": {
-            "start": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.6"
-            },
-            "end": {
-              "x": "screenWidth/2",
-              "y": "screenHeight * 0.3"
-            },
-            "duration": 200
-          },
-          "activityIds": "com.yxcorp.gifshow.HomeActivity",
-          "matches": "[vid=\"layout_root_hot_live_play\" || text=\"直播中\" || text=\"直播卖货\"][visibleToUser=true]",
-          "snapshotUrls": [
-            "https://i.gkd.li/i/29029433",
-            "https://i.gkd.li/i/29211656",
-            "https://i.gkd.li/i/30167631"
-          ]
         }
       ]
     },
